@@ -1,0 +1,232 @@
+---
+name: Color Center Architectural Studio
+colors:
+  surface: '#f8f9ff'
+  surface-dim: '#d0dbed'
+  surface-bright: '#f8f9ff'
+  surface-container-lowest: '#ffffff'
+  surface-container-low: '#eff4ff'
+  surface-container: '#e6eeff'
+  surface-container-high: '#dee9fc'
+  surface-container-highest: '#d9e3f6'
+  on-surface: '#121c2a'
+  on-surface-variant: '#444651'
+  inverse-surface: '#27313f'
+  inverse-on-surface: '#eaf1ff'
+  outline: '#757682'
+  outline-variant: '#c5c5d3'
+  surface-tint: '#4059aa'
+  primary: '#00236f'
+  on-primary: '#ffffff'
+  primary-container: '#1e3a8a'
+  on-primary-container: '#90a8ff'
+  inverse-primary: '#b6c4ff'
+  secondary: '#006398'
+  on-secondary: '#ffffff'
+  secondary-container: '#5bb8fe'
+  on-secondary-container: '#00476e'
+  tertiary: '#003212'
+  on-tertiary: '#ffffff'
+  tertiary-container: '#004b1e'
+  on-tertiary-container: '#00c65b'
+  error: '#ba1a1a'
+  on-error: '#ffffff'
+  error-container: '#ffdad6'
+  on-error-container: '#93000a'
+  primary-fixed: '#dce1ff'
+  primary-fixed-dim: '#b6c4ff'
+  on-primary-fixed: '#00164e'
+  on-primary-fixed-variant: '#264191'
+  secondary-fixed: '#cce5ff'
+  secondary-fixed-dim: '#93ccff'
+  on-secondary-fixed: '#001d31'
+  on-secondary-fixed-variant: '#004b73'
+  tertiary-fixed: '#66ff8e'
+  tertiary-fixed-dim: '#3de273'
+  on-tertiary-fixed: '#002109'
+  on-tertiary-fixed-variant: '#005322'
+  background: '#f8f9ff'
+  on-background: '#121c2a'
+  surface-variant: '#d9e3f6'
+typography:
+  headline-xl:
+    fontFamily: Plus Jakarta Sans
+    fontSize: 48px
+    fontWeight: '800'
+    lineHeight: 56px
+    letterSpacing: -0.025em
+  headline-xl-mobile:
+    fontFamily: Plus Jakarta Sans
+    fontSize: 32px
+    fontWeight: '800'
+    lineHeight: 40px
+    letterSpacing: -0.02em
+  headline-lg:
+    fontFamily: Plus Jakarta Sans
+    fontSize: 36px
+    fontWeight: '700'
+    lineHeight: 44px
+    letterSpacing: -0.02em
+  headline-lg-mobile:
+    fontFamily: Plus Jakarta Sans
+    fontSize: 26px
+    fontWeight: '700'
+    lineHeight: 34px
+    letterSpacing: -0.015em
+  headline-md:
+    fontFamily: Plus Jakarta Sans
+    fontSize: 24px
+    fontWeight: '700'
+    lineHeight: 32px
+    letterSpacing: -0.01em
+  headline-sm:
+    fontFamily: Plus Jakarta Sans
+    fontSize: 20px
+    fontWeight: '600'
+    lineHeight: 28px
+  body-lg:
+    fontFamily: Inter
+    fontSize: 18px
+    fontWeight: '400'
+    lineHeight: 28px
+  body-md:
+    fontFamily: Inter
+    fontSize: 16px
+    fontWeight: '400'
+    lineHeight: 24px
+  body-sm:
+    fontFamily: Inter
+    fontSize: 14px
+    fontWeight: '400'
+    lineHeight: 20px
+  label-lg:
+    fontFamily: Inter
+    fontSize: 14px
+    fontWeight: '600'
+    lineHeight: 20px
+    letterSpacing: 0.01em
+  label-md:
+    fontFamily: Inter
+    fontSize: 12px
+    fontWeight: '600'
+    lineHeight: 16px
+    letterSpacing: 0.02em
+  label-sm:
+    fontFamily: Inter
+    fontSize: 11px
+    fontWeight: '500'
+    lineHeight: 14px
+    letterSpacing: 0.03em
+rounded:
+  sm: 0.25rem
+  DEFAULT: 0.5rem
+  md: 0.75rem
+  lg: 1rem
+  xl: 1.5rem
+  full: 9999px
+spacing:
+  gutter: 1.5rem
+  gutter-mobile: 1rem
+  margin: 2rem
+  margin-mobile: 1rem
+  space-xs: 0.25rem
+  space-sm: 0.5rem
+  space-md: 1rem
+  space-lg: 1.5rem
+  space-xl: 2.5rem
+---
+
+## Brand & Style
+
+This design system serves a premier architectural coatings dealer and authorized distributor in Valledupar, Colombia. The interface bridges industrial reliability and tactile inspiration. It balances corporate credibility with the sensory warmth of Caribbean architecture and expressive interior design.
+
+The aesthetic fuses modern high-trust commerce with tactile paint craftsmanship:
+- **Clean Structure:** Generous whitespace, precise typography, and organized spatial hierarchies that communicate enterprise-grade expertise and inventory depth.
+- **Chromatic Purity:** Grounded in navy and architectural whites, with calculated accents derived from professional paint swatches (coral, ochre, teal, and sage) used to categorize surfaces and product lines.
+- **Conversion Readiness:** High-contrast direct-action touchpoints—most notably WhatsApp consultation channels—integrated naturally as primary pathways rather than jarring interruptions.
+- **Local Context:** Architectural references suited for high-sunlight, warm-climate materials (durability, thermal protection, moisture resistance) presented through balanced, unhurried UI cards.
+
+## Colors
+
+The color palette establishes immediate corporate authority while providing vivid, precise tools for chromatic selection.
+
+### Core Hierarchy
+- **Primary Navy (`#1E3A8A`):** Anchors headers, primary brand assets, key navigation rails, and high-level typography. Communicates authorized distribution, longevity, and structural trust.
+- **Electric Blue (`#0284C7`):** The signature brand accent. Used for interactive states, progress indicators, selected filter tags, active tabs, and secondary buttons.
+- **WhatsApp Action Green (`#25D366` / Hover: `#1EBE5D`):** Reserved exclusively for high-conversion advisory actions, order confirmations via chat, and direct branch communication buttons.
+- **Neutral Dark Charcoal (`#1F2937`):** Ensures high-legibility body text, technical specs, and interface iconography.
+- **Muted Charcoal (`#4B5563`):** Subtext, metadata, input placeholders, and inactive borders.
+
+### Canvas & Surface
+- **Canvas (`#FAFAF7`):** A warm off-white surface tone mimicking unpainted fine plaster, reducing glare under high ambient light conditions.
+- **Surface Elevation (`#FFFFFF`):** Pure crisp white cards, popovers, and containers that float over the canvas, creating subtle layering.
+- **Subtle Surface (`#F3F4F0`):** Table header backgrounds, inactive chip fills, and search field containers.
+
+### Swatch Accent Tokens (Product Category Coding)
+- **Terracotta / Coral (`#E76F51`):** Exterior & weatherproofing lines.
+- **Ochre Gold (`#E9C46A`):** Wood protection, varnishes, and specialty finishes.
+- **Deep Teal (`#2A9D8F`):** Architectural interior acrylics and washables.
+- **Indigo Swatch (`#4338CA`):** Industrial and heavy-duty coatings.
+- **Warm Sage (`#84A98C`):** Eco-friendly and low-VOC residential systems.
+
+## Typography
+
+The typography pairs geometric authority with utilitarian clarity:
+- **Headings (Plus Jakarta Sans):** Crafted with balanced counters and geometric terminals. Bold and Extra-Bold weights create clear focal anchors for product lines, guarantees, and branch locations. Negative letter spacing on scales 24px and above keeps headlines tight and impactful.
+- **Body & Data (Inter):** Neutral, highly legible at small sizes, and purpose-built for reading product specs, coverage calculations (sqm/gal), mixing instructions, and delivery timelines.
+- **Numerical Details:** Price points, SKU codes, and phone numbers utilize tabular figure alignments (`font-variant-numeric: tabular-nums`) within Inter for aligned scanning across quote summaries.
+
+## Layout & Spacing
+
+This system utilizes a responsive 12-column fluid grid system pinned to a maximum container width of `1280px` for desktop environments.
+
+### Breakpoints & Layout Adaptations
+- **Mobile (< 768px):** 4-column layout. Margin set to `1rem`, gutter set to `1rem`. Floating sticky WhatsApp action dock fixed to viewport bottom with `12px` safe-area clearance. Full-width touch cards.
+- **Tablet (768px - 1024px):** 8-column layout. Margin set to `1.5rem`, gutter set to `1.25rem`. Segment cards collapse to 2 columns; filter bars become horizontally scrollable chips.
+- **Desktop (> 1024px):** 12-column layout. Margins scale dynamically up to `2rem`. Complex catalog displays utilize a 3-column filter/spec grid paired with 9-column dynamic swatch listings.
+
+Vertical rhythm adheres to an 8px baseline. Grouped elements (e.g., paint finish badges, color chips) employ compact intervals (`space-xs` and `space-sm`), while content sections transition across generous intervals (`space-xl` to `4rem`) to maintain an uncluttered architectural portfolio feel.
+
+## Elevation & Depth
+
+Visual depth is conveyed through delicate, warm-tinted ambient shadows layered on crisp boundaries, avoiding dense drop-shadows that distract from paint color accuracy.
+
+- **Level 0 (Flat):** Used for base page background (`#FAFAF7`) and muted field inputs. Border: 1px solid `#E5E7EB`.
+- **Level 1 (Resting Cards):** Pure white surfaces raised above the warm background. `box-shadow: 0 1px 3px 0 rgba(31, 41, 55, 0.05), 0 1px 2px -1px rgba(31, 41, 55, 0.05);` with an optional hairline edge (`1px solid #ECEEE9`).
+- **Level 2 (Interactive / Hover):** Activated paint cards, hovered customer segment panels, and sticky navigation. `box-shadow: 0 10px 15px -3px rgba(30, 58, 138, 0.07), 0 4px 6px -4px rgba(30, 58, 138, 0.04);` with a translateY(-2px) elevation shift.
+- **Level 3 (Modals, Color Picker Drawers, Floating CTA):** WhatsApp trigger pills and high-level dialogs. `box-shadow: 0 20px 25px -5px rgba(15, 23, 42, 0.12), 0 8px 10px -6px rgba(15, 23, 42, 0.06);`.
+
+## Shapes
+
+The interface embraces a balanced modern radius (`roundedness: 2` = `0.5rem` / `8px` default):
+- **Base Components (Inputs, Small Buttons, Chips):** `8px` (`0.5rem`) ensures an approachable, modern feel without feeling toy-like.
+- **Cards, Modals, Segment Banners:** `16px` (`1rem`, `rounded-lg`) for a clean, contained framing of paint color photography and technical tables.
+- **Action Pills & Swatches:** Circular (`9999px`) for color swatch disks, trust badge icons, and high-impact WhatsApp conversion triggers.
+
+## Components
+
+### Buttons
+- **Primary Action (Brand):** Background `#1E3A8A`, text `#FFFFFF`, font `label-lg`. Padding: `12px 24px`. Radius: `8px`. Hover: `#172554`. Focused state utilizes a `3px` outline in `#0284C7` with `2px` offset.
+- **Direct WhatsApp CTA:** Background `#25D366`, text `#FFFFFF`, font `label-lg` with embedded WhatsApp SVG icon on left. Hover: `#1EBE5D`. Shadow level 2. Mobile variants render as full-width persistent sticky bars.
+- **Secondary / Ghost:** Transparent background, `1.5px` border in `#0284C7`, text `#0284C7`. Hover: `#F0F9FF` background.
+
+### Swatch Badges & Chips
+- **Color Category Chips:** Horizontal pill containers (`roundedness: 3`) with a `10px` circular color dot on the left followed by the color name (e.g., "Ocre Valle", "Azul Caribe"). Border: `1px solid #E5E7EB`. Active state: border `#0284C7`, background `#F0F9FF`.
+- **Segment Tags:** Compact, uppercase tags (`label-sm`) with a light background tint matching category palettes (e.g., Sage for "Ecológico", Amber for "Industrial").
+
+### Segment Cards (Contractor, Residential, Architect)
+- **Container:** Pure white card, `16px` radius, `1px solid #ECEEE9`. Padding: `24px`.
+- **Header:** Features an accent strip along the top edge (`4px` height) colored in the segment's thematic swatch.
+- **Content:** Headline-sm followed by body-sm. Bottom footer contains a dedicated "Consultar Asesor" text link paired with an arrow icon.
+
+### Form Inputs & Color Search
+- **Input Fields:** Height `48px`, background `#FFFFFF`, border `1px solid #D1D5DB`, radius `8px`, typography `body-md`. Focus: border `#0284C7`, outline `3px solid rgba(2, 132, 199, 0.15)`.
+- **Search Dropdown:** Integrated color code auto-suggest showing hex color preview box (`24x24px`, radius `4px`), Sherwin-Williams collection code, and family name.
+
+### Structured FAQ Accordion
+- **Wrapper:** Divided by horizontal hairlines (`#E5E7EB`). No external bounding border.
+- **Trigger:** Full-width flex container, typography `headline-sm`, right-aligned chevron icon rotating 180deg on expansion.
+- **Content:** Expandable container with smooth height transitions, typography `body-md`, muted charcoal text (`#4B5563`), padding bottom `16px`.
+
+### Location & Store Card (Valledupar Flagship)
+- **Container:** Dual-column card on desktop, stacked on mobile. Left side contains structured business data: operational hours, authorized distributor seal, direct phone, and instant "Abrir en Waze / Google Maps" CTA button. Right side embeds a responsive map preview with a custom Navy pin indicator.

@@ -1,0 +1,8 @@
+{
+  "name": "Color Center Automotriz Valledupar - Sherwin-Williams",
+  "description": "Distribuidor oficial Sherwin-Williams Automotive Finishes en Valledupar. Pinturas automotrices, sistemas bicapa, barnices 2K, igualación computarizada por código y espectrofotómetro, despacho exprés a talleres.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
