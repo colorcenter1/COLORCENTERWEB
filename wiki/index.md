@@ -17,3 +17,6 @@ fuentes: [../AGENTS.md]
 - [[decisiones]] — decisiones confirmadas y su procedencia.
 - [[pendientes]] — dudas y tareas para continuar.
 - [[log]] — historial cronológico de mantenimiento.
+
+## Planes de mejora
+- [Plan del carrito](../PLAN%20DE%20MEJORA/06-color-center-valledupar/plan-carrito.md) — análisis actual, alcance provisional, pasos y preguntas por resolver.
