@@ -15,5 +15,5 @@ fuentes: [../README.md, ../package.json]
 - **Pendiente visual:** revisar los HTML/Markdown e imágenes restantes de AI Studio antes de usarlos como activos.
 - **Pendiente de publicación:** destino y estado desconocidos; no se ha publicado.
 - **Sugerencia pequeña para que el propietario elija:** ocultar la sección de testimonios hasta recibir casos reales aprobados; es una corrección focalizada y reversible.
-- **Pendiente de alcance del carrito:** responder las cinco preguntas de [Plan del carrito](../PLAN%20DE%20MEJORA/06-color-center-valledupar/plan-carrito.md) antes de implementar un flujo de pedidos o cobros.
+- **Pendiente del carrito, confirmado por el propietario:** preparar catálogo de productos/categorías más adelante; solicitar modelos 3D autorizados y confirmar el WhatsApp/dirección de recogida antes de implementar esa parte. Seguir [Plan del carrito](../PLAN%20DE%20MEJORA/06-color-center-valledupar/plan-carrito.md).
 - **Confirmado en el código:** no existe carrito ni pago en línea; el catálogo actual consulta por WhatsApp. No hay precio estructurado ni inventario conectados.

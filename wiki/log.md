@@ -40,3 +40,10 @@ fuentes: [../AGENTS.md, ../package.json, ../src/data/mockData.ts]
 - Se creó `PLAN DE MEJORA/06-color-center-valledupar/plan-carrito.md` con alcance provisional recomendado (lista de cotización por WhatsApp), pasos, implicaciones de pagos y cinco preguntas decisivas.
 - No se modificó la interfaz ni se añadieron dependencias: pagos, precios, stock, variantes y entrega aún no están definidos. La guía de skills fue revisada, pero no se instalaron skills.
 - Consultar [[pendientes]] y [Plan del carrito](../PLAN%20DE%20MEJORA/06-color-center-valledupar/plan-carrito.md).
+
+## [2026-11-06] alcance | Carrito WhatsApp y visualización 3D
+- El propietario confirmó: cotización por WhatsApp sin pago en la página; el asesor confirma precio y disponibilidad; recogida en sede.
+- El propietario indicó que desea Three.js para visualizar productos dentro del carrito. Se planifica un visor 3D, separado de la lógica de carrito que seguirá en React/TypeScript.
+- A petición del propietario, se aplazó la pregunta sobre categorías/productos hasta que disponga del catálogo. Quedan por confirmar el WhatsApp/dirección de recogida y por aportar modelos 3D propios/autorizados; no se encontraron modelos 3D en el inventario actual.
+- Se actualizó el plan y la wiki. No se cambió la landing ni se instaló Three.js o skills; falta disponer del catálogo/activos y npm para pasar a implementación/verificación.
+- Consultar [[decisiones]], [[pendientes]] y [Plan del carrito](../PLAN%20DE%20MEJORA/06-color-center-valledupar/plan-carrito.md).
