@@ -24,9 +24,11 @@ fuentes: [../AGENTS.md, ../package.json, ../src/data/mockData.ts]
 - No se hizo cambio visual en la landing porque no se solicitó uno específico; la mejora sugerida quedó pendiente de elección.
 - Consultar [[index]], [[estado-del-proyecto]], [[empresa]], [[documentos-y-activos]], [[decisiones]] y [[pendientes]].
 
-## [2026-11-06] conexión | Preparación del repositorio privado
+## [2026-11-06] conexión | Repositorio privado
 - Se autenticó en GitHub mediante el navegador y se verificó que `colorcenter1/COLORCENTERWEB` es privado y está vacío.
 - Se inicializó Git local en `main` con la identidad local indicada por el propietario.
 - Se revisó el conjunto candidato: archivos del sitio, configuración, wiki y recursos públicos necesarios; `.aistudio/`, temporales y archivos `.env` reales no se incluyeron. La búsqueda de patrones comunes de credenciales no encontró coincidencias; `.env.example` tiene un marcador de ejemplo.
-- El contenido seleccionado quedó preparado para el commit inicial; aún no se agregó remoto ni se subió código.
+- Se creó el commit inicial `1521ad1` (`Conectar landing de Color Center`), se agregó `origin` y se subió `main` a GitHub.
+- La página del repositorio se recargó y muestra `main`, archivos del sitio, `wiki/`, el README y la etiqueta Privado. El contenido del remoto coincide con el commit inicial.
+- El repositorio quedó vinculado localmente y la rama `main` sigue `origin/main`.
 - Consultar [[estado-del-proyecto]] y [[pendientes]].
