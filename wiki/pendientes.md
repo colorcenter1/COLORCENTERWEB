@@ -23,3 +23,15 @@ fuentes: [../landing/README.md, ../landing/package.json]
 
 - **Revisión visual 2026-11-10:** corregir la imagen externa de Masillas Poliéster (HTTP 404) con un activo autorizado y revisar solapamientos de la cabecera en escritorio/móvil. Son problemas del prototipo, anteriores al traslado.
 - **Fuentes tras reorganización:** Docs/Logo.jpg inventariado e inspeccionado; ubicación actual de los ZIP del plan y instalar-skills.md pendiente (ya no aparecen en su ruta anterior).
+
+## Tras el rediseño (2026-11-10)
+- **Confirmar el número de WhatsApp** `+57 300 442 6477` (viene del prototipo y se usa en todos los enlaces).
+- **Horario de atención:** no se publica hasta confirmarlo; la ficha de Maps tampoco lo tiene. Valorar reclamar/verificar la ficha de Google (acción del propietario con su cuenta) y añadir teléfono y horario allí.
+- **Dominio real:** necesario para canónica, `og:url`, imagen para redes y sitemap. Publicación no autorizada todavía.
+- **Fotos propias:** al llegar a `Docs/`, revisar y valorar su uso en portada, productos y ubicación.
+- **Marcas y referencias de producto:** no se muestran; incorporar solo con catálogo confirmado. Revisar también si la mención a Sherwin-Williams se puede respaldar.
+- **Validar la paleta** de 20 tonos con la carta del negocio, en especial «Gris ratón» y «Negro nebuloso». Siguen siendo orientativos.
+- **Revisar los vehículos 3D propios** en la vista local; los ajustes de forma son cambios de medidas en `landing/src/components/simulator/carSpecs.ts`.
+- **Enlaces legales:** no existen; la página no recoge datos personales. Si se añade un formulario, aplicar la skill `tratamiento-datos-landing`.
+- **Calculadora de cantidades:** fuera de la versión pública hasta validar coeficientes.
+- **Resueltos el 2026-11-10:** testimonios de muestra, imagen rota de Masillas, solapamientos de cabecera y skills de diseño (instaladas).

@@ -66,3 +66,12 @@ fuentes: [../AGENTS.md, ../landing/package.json, ../landing/src/data/mockData.ts
 - Revisión visual en escritorio y móvil 390 × 844, sin desbordamiento horizontal móvil; probados filtro del catálogo, calculadora (apertura, selección general y cierre), cambio de color y menú móvil. Sin errores/advertencias en la consola capturada. No se enviaron mensajes por WhatsApp.
 - Pendientes previos al traslado: imagen externa de Masillas Poliéster en Unsplash con HTTP 404 y solapamientos en la cabecera. No se sustituyeron activos ni se rediseñó la página.
 - Sin publicación, commit ni push. Consultar [[estado-del-proyecto]], [[documentos-y-activos]] y [[pendientes]].
+
+## [2026-11-10] implementación | Rediseño según PLAN TRABAJO.md
+- Versión recuperable: commit `4685827` y etiqueta local `antes-del-rediseno` (reorganización del propietario, wiki y plan; sin `Docs/`, dependencias ni compilados).
+- Skills de Emil Kowalski (MIT) e Impeccable (Apache 2.0) instaladas en `.agents/skills/` desde sus repositorios oficiales, con commits registrados; sin ejecutar lanzadores ni activar hooks. Se aplicaron sus criterios y la skill `seo-organico-ia`.
+- Landing reescrita: portada, simulador, categorías, asesoría, cómo comprar, preguntas, ubicación y pie. Retirados testimonios, métricas, controles del prototipo, notas técnicas, calculadora, mapa ilustrativo, «Waze» y menciones a Sherwin-Williams y a servicios. Dirección tomada de la ficha de Maps.
+- Modelos 3D: se evaluaron opciones gratuitas; ninguna era realista, sin marca y descargable sin cuenta. El propietario pidió crearlos: sedán, hatchback y pickup modelados por código. Composición visual aprobada por el propietario.
+- Prerender con React en la compilación; JSON-LD `Store` con datos confirmados; canónica y sitemap pendientes del dominio.
+- Verificado localmente: tipos, 16 pruebas, compilación, 320–1440 px, teclado, movimiento reducido, contraste, simulador y fallos del visor, ausencia de descargas 3D antes del clic, enlaces de Maps/WhatsApp (sin enviar), LCP 0,76–1,20 s y CLS 0,037 con condiciones móviles simuladas. No publicado; sin push.
+- Consultar [[estado-del-proyecto]], [[estructura-de-la-landing]], [[decisiones]], [[pendientes]] y [[documentos-y-activos]].

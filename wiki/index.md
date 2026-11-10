@@ -9,7 +9,7 @@ fuentes: [../AGENTS.md]
 # Índice de la wiki
 
 ## Proyecto
-- Aplicación en `landing/`: [instrucciones de ejecución](../landing/README.md). Vista previa local: [abrir landing](http://127.0.0.1:3000/) mientras el servidor esté activo.
+- Aplicación en `landing/`: [instrucciones de ejecución](../landing/README.md). Vista previa local: [desarrollo](http://127.0.0.1:3000/) y [producción](http://127.0.0.1:4173/) mientras los servidores estén activos.
 - [[estado-del-proyecto]] — código, ejecución, verificaciones y siguiente paso.
 - [[empresa]] — información del negocio, oferta, públicos, canales e identidad.
 
@@ -21,4 +21,5 @@ fuentes: [../AGENTS.md]
 
 ## Planes de mejora
 - [Plan del carrito](../PLAN%20DE%20MEJORA/06-color-center-valledupar/plan-carrito.md) — análisis actual, alcance provisional, pasos y preguntas por resolver.
-- [[estructura-de-la-landing]] — revisión de secciones y propuesta de orden, pendiente de aprobación.
+- [[estructura-de-la-landing]] — secciones implementadas según el plan de trabajo.
+- [Plan de trabajo del rediseño](../PLAN%20TRABAJO.md) — dirección, simulador, rendimiento y SEO.

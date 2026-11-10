@@ -1,16 +1,10 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://ai.google.dev/static/site-assets/images/share-ais-513315318.png" />
-</div>
+# Landing de Color Center (Valledupar)
 
-# Run and deploy your AI Studio app
-
-This contains everything you need to run your app locally.
-
-View your app in AI Studio: https://ai.studio/apps/f02fa02d-69ed-42e8-9692-ca268544e05f
+Página de venta de pinturas e insumos automotrices con consulta por WhatsApp, simulador de colores 3D y ubicación. React 19 + TypeScript + Vite; el contenido se prerenderiza en la compilación para que esté disponible sin JavaScript.
 
 ## Vista previa local en Windows
 
-La aplicación está dentro de `landing/`. Desde la raíz `COLORCENTERWEB`, abrir PowerShell y ejecutar:
+Desde la raíz `COLORCENTERWEB`, en PowerShell:
 
 ```powershell
 cd landing
@@ -18,13 +12,24 @@ npm.cmd install
 npm.cmd run dev
 ```
 
-Abrir la dirección que indique Vite, normalmente http://localhost:3000. Si las dependencias ya están instaladas, basta con `npm.cmd run dev` desde esta carpeta. Mantener la terminal abierta durante la previsualización; `Ctrl+C` detiene el servidor.
+Abrir http://127.0.0.1:3000/. `Ctrl+C` detiene el servidor.
 
-Para comprobar el proyecto desde `landing/`:
+## Comprobaciones (desde `landing/`)
 
 ```powershell
-npm.cmd run lint
-npm.cmd run build
+npm.cmd run lint      # TypeScript
+npm.cmd test          # pruebas unitarias (Vitest)
+npm.cmd run build     # compilación + prerender en dist/
+npm.cmd run preview   # sirve dist/ en http://127.0.0.1:4173/
 ```
 
-La landing actual funciona en el navegador y no usa `GEMINI_API_KEY`. No hace falta configurar una clave para previsualizarla. El catálogo y las métricas son datos de demostración locales; los enlaces de WhatsApp abren un servicio externo.
+## Organización
+
+- `src/data/` — datos del negocio (`business.ts`), paleta orientativa (`palette.ts`), categorías y preguntas (`catalog.ts`).
+- `src/lib/` — enlaces de WhatsApp y utilidades de color, con sus pruebas.
+- `src/components/` — secciones de la página; `simulator/` contiene el simulador. `scene.ts`, `carFactory.ts` y `carSpecs.ts` (Three.js y los vehículos generados por código) solo se descargan cuando el visitante pulsa «Probar colores».
+- `scripts/prerender.mjs` — inserta el HTML de React en `dist/index.html`.
+- `public/` — logo, tipografía Archivo (licencia OFL incluida).
+- `referencias-aistudio/` — archivos de referencia del prototipo de AI Studio; no se publican.
+
+No hay claves ni variables de entorno necesarias. Los enlaces de WhatsApp y Google Maps abren servicios externos; la página no envía mensajes por sí misma.

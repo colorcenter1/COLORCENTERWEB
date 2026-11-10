@@ -37,3 +37,15 @@ No se encontró carpeta `fuentes/` ni ZIP original de Google AI Studio en la ra�
 ## Revisión de reorganización, 2026-11-10
 - Todas las rutas de código y activos web pasan a landing/; los originales empresariales siguen en Docs/.
 - La imagen externa de Masillas Poliéster (photo-1486006920555-c77dce18193b, Unsplash) responde HTTP 404. Pendiente de sustituto autorizado; no se cambió el catálogo.
+
+## Rediseño 2026-11-10: skills, activos y modelos
+| Ruta | Categoría | Descripción | Fecha o versión | Uso | Pendiente |
+|---|---|---|---|---|---|
+| `.agents/skills/emil-design-eng/`, `.agents/skills/mobile-native/` | Skills de diseño | Copias completas desde https://github.com/emilkowalski/skills, licencia MIT (`LICENSE.upstream`) | Commit `715c1807e08c497cfd1dc4feb450a2a3300ef2a9` (2026-11-09) | Criterios de animación, interacción y accesibilidad | — |
+| `.agents/skills/impeccable/` | Skill de diseño | Copia completa desde https://github.com/pbakaus/impeccable (`.agents/skills/impeccable`), Apache 2.0 (`LICENSE.upstream`, `NOTICE.upstream.md`). Skill v4.8.2, scripts 0.1.22 | Commit `f2baa414a87d9acf1e21ccf776bfaec0262ad6df` (2026-11-10) | Referencias leídas directamente | No se ejecutó su lanzador (descarga un binario) ni se activaron sus hooks |
+| `landing/public/brand/logo-color-center.png` | Identidad visual | Logo existente del proyecto (antes `public/assets/aistudio/image_dab9c635.png`), 150 × 150 | Movido 2026-11-10 | Logo y favicon | Versión de mayor resolución |
+| `landing/public/fonts/archivo-latin-wdth.woff2` | Tipografía | Archivo variable (subconjunto latino, ancho y peso), autoalojada desde `@fontsource-variable/archivo`; licencia SIL OFL en `archivo-OFL.txt` | 5.3.0 | Tipografía de la web | — |
+| `landing/referencias-aistudio/` | Referencias del prototipo | Captura de Stitch, HTML y DESIGN.md con colores de marca (movidos fuera de `public/` para no publicarlos) | Movido 2026-11-10 | Referencia de colores | — |
+| `landing/src/components/simulator/carSpecs.ts`, `carFactory.ts` | Modelos 3D propios | Sedán, hatchback y pickup genéricos modelados por código para Color Center; sin marcas ni activos de terceros; no hay archivo de modelo (se generan en el navegador) | 2026-11-10 | Simulador | Revisión visual del propietario |
+
+**Modelos de terceros evaluados y no integrados (2026-11-10):** «Free Low Poly Vehicles Pack» de rgsdev (OpenGameArt, CC0, ~55 KB y ~1.500 triángulos por vehículo; estilo low-poly, descartado por el propietario); Kenney Car Kit (CC0, sin material de carrocería separado); paquetes CC BY de Sketchfab («Generic passenger car pack» de comrade1280; serie de DanielZhabotinsky), que requieren cuenta y no se descargaron; varios descartados por parecido con modelos de marca. Las copias quedaron solo en el directorio temporal de la sesión.
