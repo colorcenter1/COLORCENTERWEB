@@ -2,16 +2,16 @@
 tipo: empresa
 estado: provisional
 creado: 2026-11-06
-actualizado: 2026-11-06
+actualizado: 2026-11-10
 tags: [empresa, oferta, contacto]
-fuentes: [../src/data/mockData.ts, ../src/components/Footer.tsx, ../src/components/TestimonialsSection.tsx]
+fuentes: [../landing/src/data/mockData.ts, ../landing/src/components/Footer.tsx, ../landing/src/components/TestimonialsSection.tsx]
 ---
 # Empresa
 
 ## Identidad y ubicación
 - **Provisional (según código existente, pendiente de validar con fuente empresarial):** nombre Color Center Automotriz Valledupar; ubicación Calle 21 # 17-96, barrio Pablo VI, Valledupar, Cesar, Colombia.
 - **Provisional (según código):** la página presenta al negocio como distribuidor oficial Sherwin-Williams Automotive Finishes. Solicitar material que confirme autorización antes de tratarla como afirmación comprobada.
-- **Pendiente:** no hay logos/documentos empresariales aportados en `Docs/`. El sitio incluye un PNG usado como logo/favicon; su inspección visual muestra un emblema azul con un automóvil estilizado, sin texto legible. Procedencia y aprobación pendientes.
+- **Pendiente:** se añadió `Docs/Logo.jpg`, inspeccionado el 2026-11-10; procedencia/autorización final y otros documentos empresariales aún pendientes. El sitio incluye un PNG usado como logo/favicon; su inspección visual muestra un emblema azul con un automóvil estilizado, sin texto legible. Procedencia y aprobación pendientes.
 
 ## Oferta y públicos
 - **Provisional (según catálogo codificado, no catálogo original revisado):** pintura automotriz y productos de repintado, incluidos bases bicapa, barnices, primers/fondos, masillas, abrasivos y pulido.

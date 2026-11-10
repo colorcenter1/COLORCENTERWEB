@@ -9,6 +9,7 @@ fuentes: [../AGENTS.md]
 # Índice de la wiki
 
 ## Proyecto
+- Aplicación en `landing/`: [instrucciones de ejecución](../landing/README.md). Vista previa local: [abrir landing](http://127.0.0.1:3000/) mientras el servidor esté activo.
 - [[estado-del-proyecto]] — código, ejecución, verificaciones y siguiente paso.
 - [[empresa]] — información del negocio, oferta, públicos, canales e identidad.
 

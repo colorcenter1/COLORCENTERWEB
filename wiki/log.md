@@ -4,7 +4,7 @@ estado: vigente
 creado: 2026-11-06
 actualizado: 2026-11-10
 tags: [log, mantenimiento]
-fuentes: [../AGENTS.md, ../package.json, ../src/data/mockData.ts]
+fuentes: [../AGENTS.md, ../landing/package.json, ../landing/src/data/mockData.ts]
 ---
 # Registro
 
@@ -55,3 +55,14 @@ fuentes: [../AGENTS.md, ../package.json, ../src/data/mockData.ts]
 - Se marcó el Paso 1 como revisado. El Paso 0 sigue parcial por las tres skills de diseño externas pendientes. Se documentó el orden actual y una propuesta de estructura en [[estructura-de-la-landing]]; no se editó la página, a la espera de aprobación.
 - El propietario informó que subirá material gráfico dentro de 72 horas desde el 2026-11-10. Revisar e inventariar `Docs/` cuando aparezca; no usar imágenes de muestra mientras tanto.
 - Consultar [[estado-del-proyecto]], [[documentos-y-activos]], [[pendientes]] y [[estructura-de-la-landing]].
+
+## [2026-11-10] verificación | Reorganización y vista previa local
+- Se revisaron Git, instrucciones, wiki y Docs recursivamente. Se confirmó por hashes que los archivos trasladados por el propietario a `landing/` conservaban su contenido. No se revirtieron movimientos ni se prepararon commits.
+- Se inspeccionó `Docs/Logo.jpg` (JPEG 150 × 150) y se catalogó; original intacto, sin copiarlo a la web. Se registró que los ZIP/guía del plan ya no aparecen en sus antiguas rutas.
+- La instalación requirió acceso de red fuera del aislamiento y detectó un conflicto previo entre Vite 8 y esbuild 0.25. Se actualizó esbuild a `^0.28.2`, se instalaron 179 paquetes y se generó `landing/package-lock.json`.
+- Se conservaron las exclusiones Git en la raíz; se actualizaron instrucciones de ejecución y rutas de la wiki para `landing/`. No se modificó la interfaz ni el contenido empresarial.
+- Compilación (`npm.cmd run build`) y tipos (`npm.cmd run lint`) correctos. Aviso no bloqueante de Vite sobre `__dirname` futuro.
+- Se inició el servidor con acceso local en `http://127.0.0.1:3000/` y se dejó la pestaña integrada abierta. Página y logo local: HTTP 200.
+- Revisión visual en escritorio y móvil 390 × 844, sin desbordamiento horizontal móvil; probados filtro del catálogo, calculadora (apertura, selección general y cierre), cambio de color y menú móvil. Sin errores/advertencias en la consola capturada. No se enviaron mensajes por WhatsApp.
+- Pendientes previos al traslado: imagen externa de Masillas Poliéster en Unsplash con HTTP 404 y solapamientos en la cabecera. No se sustituyeron activos ni se rediseñó la página.
+- Sin publicación, commit ni push. Consultar [[estado-del-proyecto]], [[documentos-y-activos]] y [[pendientes]].

@@ -4,11 +4,11 @@ estado: propuesta-pendiente-de-aprobacion
 creado: 2026-11-10
 actualizado: 2026-11-10
 tags: [landing, estructura, revision]
-fuentes: [../src/App.tsx, ../src/components/Header.tsx, ../src/components/HeroSection.tsx, ../src/data/mockData.ts, ../PLAN%20DE%20MEJORA/06-color-center-valledupar/plan-mejoras.md]
+fuentes: [../landing/src/App.tsx, ../landing/src/components/Header.tsx, ../landing/src/components/HeroSection.tsx, ../landing/src/data/mockData.ts, ../PLAN%20DE%20MEJORA/06-color-center-valledupar/plan-mejoras.md]
 ---
 # Estructura actual y propuesta
 
-Esta revisión se hizo leyendo componentes y datos del código. No se abrió la vista previa del sitio. No se ha quitado ni cambiado ninguna sección; la propuesta necesita aprobación.
+La propuesta original se hizo leyendo componentes y datos del código. El 2026-11-10 se abrió y verificó la vista previa después del traslado a `landing/`; ver [[estado-del-proyecto]]. No se ha quitado ni cambiado ninguna sección; la propuesta necesita aprobación.
 
 ## Orden actual de la página
 
