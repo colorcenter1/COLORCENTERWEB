@@ -21,6 +21,7 @@
 
 ## Proyecto y ejecución
 - Código fuente: `src/`; activos web: `public/`; inventario empresarial: `Docs/`; memoria: `wiki/`.
-- El proyecto declara React, TypeScript y Vite en `package.json`; scripts declarados: `dev`, `build`, `preview`, `lint`. `README.md` propone npm, pero en la última revisión `npm` no estaba disponible y no se encontró archivo de bloqueo. Comprobar Node, npm y el bloqueo antes de ejecutar; no reinstalar herramientas ya disponibles ni inventar comandos.
+- El proyecto declara React, TypeScript y Vite en `package.json`; scripts declarados: `dev`, `build`, `preview`, `lint`. En PowerShell, `node --version` y `npm.cmd --version` se comprobaron el 2026-11-10 (Node 26.13.0, npm 11.20.0); entonces no había lockfile ni `node_modules`. Volver a comprobar al iniciar; usar `npm.cmd` en PowerShell y no inventar comandos ni reinstalar herramientas disponibles.
+- Skills instaladas desde fuentes locales en `.agents/skills/seo-organico-ia/` y `.agents/skills/tratamiento-datos-landing/`; leer la skill y solo las referencias pertinentes antes de aplicarla. Skills de diseño de terceros aún no instaladas.
 - Si la herramienta está disponible, usar los scripts declarados y el gestor indicado por el bloqueo. Verificar escritorio y móvil en navegador si está disponible. Reportar por separado compilación, revisión visual, prueba funcional y publicación; no afirmar verificaciones no ejecutadas.
 - El ZIP fuente original debe permanecer intacto. Antes de extraer un ZIP nuevo, comprobar rutas normalizadas dentro de una carpeta de trabajo del proyecto, rechazar rutas absolutas/traversal y enlaces externos, y no sobrescribir destinos existentes. Trabajar sobre la copia extraída.

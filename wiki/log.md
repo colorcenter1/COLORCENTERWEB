@@ -2,7 +2,7 @@
 tipo: registro
 estado: vigente
 creado: 2026-11-06
-actualizado: 2026-11-06
+actualizado: 2026-11-10
 tags: [log, mantenimiento]
 fuentes: [../AGENTS.md, ../package.json, ../src/data/mockData.ts]
 ---
@@ -47,3 +47,11 @@ fuentes: [../AGENTS.md, ../package.json, ../src/data/mockData.ts]
 - A petición del propietario, se aplazó la pregunta sobre categorías/productos hasta que disponga del catálogo. Quedan por confirmar el WhatsApp/dirección de recogida y por aportar modelos 3D propios/autorizados; no se encontraron modelos 3D en el inventario actual.
 - Se actualizó el plan y la wiki. No se cambió la landing ni se instaló Three.js o skills; falta disponer del catálogo/activos y npm para pasar a implementación/verificación.
 - Consultar [[decisiones]], [[pendientes]] y [Plan del carrito](../PLAN%20DE%20MEJORA/06-color-center-valledupar/plan-carrito.md).
+
+## [2026-11-10] continuidad | Skills locales y estructura
+- Se leyeron las instrucciones de `AGENTS.md`, índice, estado y páginas pertinentes, además de `plan-mejoras.md` y `instalar-skills.md`.
+- Se validaron las rutas y metadatos de los ZIP de skills; se instalaron copias completas de `seo-organico-ia` y `tratamiento-datos-landing` en `.agents/skills/`, sin modificar sus ZIP fuente. Se revisaron los SKILL.md y el script SEO, que solo lee archivos; el script no se ejecutó.
+- Se confirmó Node `v26.13.0`, npm `11.20.0` vía `npm.cmd`; faltan dependencias (`node_modules`) y lockfile, por lo que no se abrió vista previa ni se compiló.
+- Se marcó el Paso 1 como revisado. El Paso 0 sigue parcial por las tres skills de diseño externas pendientes. Se documentó el orden actual y una propuesta de estructura en [[estructura-de-la-landing]]; no se editó la página, a la espera de aprobación.
+- El propietario informó que subirá material gráfico dentro de 72 horas desde el 2026-11-10. Revisar e inventariar `Docs/` cuando aparezca; no usar imágenes de muestra mientras tanto.
+- Consultar [[estado-del-proyecto]], [[documentos-y-activos]], [[pendientes]] y [[estructura-de-la-landing]].

@@ -2,7 +2,7 @@
 tipo: índice
 estado: vigente
 creado: 2026-11-06
-actualizado: 2026-11-06
+actualizado: 2026-11-10
 tags: [wiki, landing]
 fuentes: [../AGENTS.md]
 ---
@@ -20,3 +20,4 @@ fuentes: [../AGENTS.md]
 
 ## Planes de mejora
 - [Plan del carrito](../PLAN%20DE%20MEJORA/06-color-center-valledupar/plan-carrito.md) — análisis actual, alcance provisional, pasos y preguntas por resolver.
+- [[estructura-de-la-landing]] — revisión de secciones y propuesta de orden, pendiente de aprobación.
