@@ -14,6 +14,9 @@ export const BUSINESS = {
   region: 'Cesar',
   countryCode: 'CO',
   mapsUrl: 'https://maps.app.goo.gl/p52X8eboDhx3h83GA',
+  /** Mapa insertado de Google Maps (sin clave de API), centrado en la ficha del negocio. */
+  mapsEmbedUrl:
+    'https://www.google.com/maps?q=Color+Center,+Cl.+21+%2317-96,+Valledupar,+Cesar&ll=10.4639894,-73.2492527&z=17&hl=es&output=embed',
   geo: { latitude: 10.4639894, longitude: -73.2492527 },
   whatsappNumber: '573004426477',
   whatsappDisplay: '+57 300 442 6477',

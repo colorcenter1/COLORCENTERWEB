@@ -13,8 +13,8 @@ export function generalInquiry(): string {
   return `${GREETING} Quiero consultar por pinturas e insumos automotrices.`;
 }
 
-export function categoryInquiry(categoryName: string): string {
-  return `${GREETING} Quiero consultar disponibilidad y precio en: ${categoryName}.`;
+export function productInquiry(productName: string): string {
+  return `${GREETING} Quiero consultar disponibilidad, presentaciones y precio de: ${productName}.`;
 }
 
 export interface ColorInquiry {

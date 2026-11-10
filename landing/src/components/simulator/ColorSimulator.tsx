@@ -95,7 +95,7 @@ export function ColorSimulator({ isActive, onActivate }: ColorSimulatorProps) {
               selectedToneId={selection.kind === 'tone' ? selection.toneId : null}
               onSelect={(toneId) => setSelection({ kind: 'tone', toneId })}
             />
-            <CustomColor key={color.hex} currentHex={color.hex} onApply={(hex) => setSelection({ kind: 'custom', hex })} />
+            <CustomColor currentHex={color.hex} onApply={(hex) => setSelection({ kind: 'custom', hex })} />
 
             <div className="selection-readout" style={readoutStyle} aria-live="polite">
               <i aria-hidden="true" />

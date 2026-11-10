@@ -1,9 +1,9 @@
 import { describe, expect, it } from 'vitest';
 import { ALL_TONES, COLOR_DISCLAIMER, PALETTE, findTone } from '../data/palette';
-import { CATEGORIES, FAQ } from '../data/catalog';
+import { ALL_PRODUCTS, CATEGORIES, FAQ } from '../data/catalog';
 import { BODY_MODELS, findBody } from '../components/simulator/models';
 import { normalizeHex, readableTextOn, relativeLuminance } from './color';
-import { categoryInquiry, colorInquiry, generalInquiry, whatsappUrl } from './whatsapp';
+import { colorInquiry, generalInquiry, productInquiry, whatsappUrl } from './whatsapp';
 
 describe('normalizeHex', () => {
   it('acepta HEX de 6 dígitos con o sin numeral', () => {
@@ -50,8 +50,8 @@ describe('enlaces de WhatsApp', () => {
     expect(whatsappUrl('   ')).toBe('https://wa.me/573004426477');
   });
 
-  it('incluye la categoría consultada', () => {
-    expect(categoryInquiry('Pistolas')).toContain('Pistolas');
+  it('incluye el producto consultado', () => {
+    expect(productInquiry('Lijas')).toContain('precio de: Lijas.');
     expect(generalInquiry()).toContain('pinturas e insumos automotrices');
   });
 
@@ -87,9 +87,23 @@ describe('contenido acordado', () => {
     );
   });
 
-  it('ofrece seis categorías y no promete servicios', () => {
+  it('ofrece seis categorías con los productos confirmados y no promete servicios', () => {
     expect(CATEGORIES).toHaveLength(6);
-    const text = [...CATEGORIES.map((c) => c.summary), ...FAQ.filter((f) => f.id !== 'servicios').map((f) => f.answer)]
+    expect(ALL_PRODUCTS.map((p) => p.name)).toEqual([
+      'Pinturas automotrices',
+      'Barnices',
+      'Catalizadores',
+      'Lijas',
+      'Cintas de enmascarar',
+      'Pistolas de pintura',
+      'Ceras',
+      'Complementos',
+    ]);
+    const text = [
+      ...ALL_PRODUCTS.map((p) => p.use),
+      ...CATEGORIES.map((c) => c.intro),
+      ...FAQ.filter((f) => f.id !== 'servicios').map((f) => f.answer),
+    ]
       .join(' ')
       .toLowerCase();
     expect(text).not.toMatch(/latoner|mantenimiento|pintamos|reparamos/);

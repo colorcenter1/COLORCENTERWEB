@@ -1,55 +1,102 @@
 /**
- * Categorías del plan. Las descripciones solo nombran productos que el propietario
- * confirmó vender: pinturas, barnices, catalizadores, cintas, lijas, pistolas,
- * ceras y complementos. Referencias, marcas, precios y existencias: pendientes.
+ * Productos que el propietario confirmó vender, agrupados en las categorías del plan.
+ * Las descripciones explican para qué sirve cada tipo de producto; no afirman marcas,
+ * referencias, precios, presentaciones ni existencias (pendientes de confirmar).
  */
 export type CategoryIcon = 'paint' | 'sand' | 'tape' | 'spray' | 'shine' | 'kit';
+
+export interface Product {
+  id: string;
+  name: string;
+  use: string;
+}
 
 export interface Category {
   id: string;
   name: string;
-  summary: string;
+  intro: string;
   icon: CategoryIcon;
+  products: readonly Product[];
 }
 
 export const CATEGORIES: readonly Category[] = [
   {
     id: 'pinturas',
     name: 'Pinturas, barnices y catalizadores',
-    summary: 'Pintura automotriz, barnices y los catalizadores para prepararlos.',
+    intro: 'Lo esencial para dar color y acabado a tu vehículo.',
     icon: 'paint',
+    products: [
+      {
+        id: 'pinturas-automotrices',
+        name: 'Pinturas automotrices',
+        use: 'Para repintar una pieza o el vehículo completo. Cuéntanos el tono que buscas y te orientamos.',
+      },
+      {
+        id: 'barnices',
+        name: 'Barnices',
+        use: 'La capa transparente que protege la pintura y le da el brillo final.',
+      },
+      {
+        id: 'catalizadores',
+        name: 'Catalizadores',
+        use: 'Se mezclan con los productos que los requieren, según su ficha, para que endurezcan.',
+      },
+    ],
   },
   {
     id: 'preparacion',
     name: 'Preparación y abrasivos',
-    summary: 'Lijas e insumos para preparar la superficie antes de pintar.',
+    intro: 'Una buena pintura empieza por una superficie bien preparada.',
     icon: 'sand',
+    products: [
+      { id: 'lijas', name: 'Lijas', use: 'Para preparar y alisar la superficie antes de pintar y entre capas.' },
+    ],
   },
   {
     id: 'enmascarado',
     name: 'Cintas y enmascarado',
-    summary: 'Cintas para proteger y delimitar las zonas que no se pintan.',
+    intro: 'Protege lo que no se va a pintar.',
     icon: 'tape',
+    products: [
+      {
+        id: 'cintas',
+        name: 'Cintas de enmascarar',
+        use: 'Delimitan bordes y cubren vidrios, molduras y zonas que deben quedar intactas.',
+      },
+    ],
   },
   {
     id: 'pistolas',
     name: 'Pistolas',
-    summary: 'Pistolas para la aplicación de pintura y barniz.',
+    intro: 'Para aplicar con control.',
     icon: 'spray',
+    products: [
+      { id: 'pistolas', name: 'Pistolas de pintura', use: 'Para aplicar pintura y barniz de forma pareja.' },
+    ],
   },
   {
     id: 'pulido',
     name: 'Ceras y pulido',
-    summary: 'Ceras y productos para el acabado y el cuidado del brillo.',
+    intro: 'El cuidado después de pintar.',
     icon: 'shine',
+    products: [{ id: 'ceras', name: 'Ceras', use: 'Para el acabado y el cuidado del brillo de la pintura.' }],
   },
   {
     id: 'complementos',
     name: 'Protección y complementos',
-    summary: 'Complementos para el trabajo de pintura. Pregunta por lo que necesitas.',
+    intro: 'Lo que completa el trabajo.',
     icon: 'kit',
+    products: [
+      {
+        id: 'complementos',
+        name: 'Complementos',
+        use: 'Otros insumos para el trabajo de pintura. Pregunta por lo que necesitas y te confirmamos.',
+      },
+    ],
   },
 ];
+
+export const ALL_PRODUCTS: readonly Product[] = CATEGORIES.flatMap((category) => category.products);
 
 export interface FaqEntry {
   id: string;

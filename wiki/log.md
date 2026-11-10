@@ -78,3 +78,9 @@ fuentes: [../AGENTS.md, ../landing/package.json, ../landing/src/data/mockData.ts
 
 ## [2026-11-10] validación | Vehículos 3D aprobados
 - El propietario aprobó el aspecto de los vehículos 3D propios del simulador. Se actualizaron [[decisiones]], [[pendientes]], [[estado-del-proyecto]] y [[documentos-y-activos]]. Sin cambios de código ni publicación.
+
+## [2026-11-10] ajuste | Revisión del propietario: ruedas, carrocerías, color, productos y mapa
+- Ruedas independientes; frente del hatchback más corto; pickup con frente más corto y doble cabina; selector de color libre corregido (ya no se cierra al arrastrar).
+- Sección de productos convertida en vitrina con los ocho productos confirmados y consulta individual; sin marcas ni precios no confirmados.
+- Mapa de Google Maps incrustado con carga diferida, por decisión del propietario.
+- Verificado localmente (ver [[estado-del-proyecto]]); sin publicación ni push. Decisiones en [[decisiones]].

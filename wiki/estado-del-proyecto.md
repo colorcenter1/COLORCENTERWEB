@@ -31,3 +31,10 @@ fuentes: [../PLAN%20TRABAJO.md, ../landing/package.json, ../landing/README.md, .
 ## Publicación
 
 - **No publicado.** Sin push, dominio, DNS ni costos. Canónica, `og:url`, imagen social y sitemap pendientes del dominio real.
+
+## Ajustes tras la revisión del propietario (2026-11-10)
+
+- **Simulador:** cuatro ruedas independientes (cada una con su propio paso de rueda; antes un cilindro atravesaba el vehículo de lado a lado); hatchback con frente 16 cm más corto; pickup con frente 24 cm más corto y cabina doble más larga (zona de pasajeros traseros ampliada); el selector de color libre ya no se cierra al arrastrar (antes el campo se reconstruía con cada cambio).
+- **Productos:** vitrina con los ocho productos confirmados, su uso y consulta individual por WhatsApp.
+- **Ubicación:** mapa de Google Maps incrustado; muestra el marcador «Color Center» en Cl. 21 #17-96. Se carga al acercarse a la sección.
+- **Verificado localmente:** tipos, 16 pruebas, compilación, sin descargas 3D ni externas en la carga inicial, mapa cargado al llegar a la sección (escritorio y móvil), arrastre simulado del selector de color sin desmontar el campo, conservación del color al cambiar de carrocería, 360–1440 px sin desplazamiento horizontal, sin errores de consola. El selector nativo de color debe confirmarse también con el ratón o el dedo en tu navegador: la prueba automática simula el arrastre.

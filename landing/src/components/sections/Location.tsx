@@ -1,4 +1,4 @@
-import { MapPin, MessageCircle, Navigation } from 'lucide-react';
+import { MessageCircle, Navigation } from 'lucide-react';
 import { BUSINESS } from '../../data/business';
 import { generalInquiry, whatsappUrl } from '../../lib/whatsapp';
 
@@ -20,6 +20,7 @@ export function Location() {
               Confirma por WhatsApp que tu pedido está listo antes de venir. El horario de atención se informa por
               ese mismo canal.
             </p>
+            <p className="map-note">El mapa lo muestra Google Maps. Usa «Abrir en Google Maps» para ver la ruta.</p>
             <div className="location-actions">
               <a className="btn btn-primary" href={BUSINESS.mapsUrl} target="_blank" rel="noopener noreferrer">
                 <Navigation size={18} aria-hidden="true" />
@@ -36,13 +37,14 @@ export function Location() {
               </a>
             </div>
           </div>
-          <div className="location-side">
-            <MapPin size={28} aria-hidden="true" />
-            <strong>Color Center · Tienda de pinturas</strong>
-            <p>La ficha de Google Maps te da la ruta exacta desde donde estés.</p>
-            <p className="coords">
-              {BUSINESS.geo.latitude.toFixed(5)}, {BUSINESS.geo.longitude.toFixed(5)}
-            </p>
+          <div className="location-map">
+            <iframe
+              src={BUSINESS.mapsEmbedUrl}
+              title="Mapa de Google con la ubicación de Color Center en Cl. 21 #17-96, Valledupar"
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              allowFullScreen
+            />
           </div>
         </div>
 

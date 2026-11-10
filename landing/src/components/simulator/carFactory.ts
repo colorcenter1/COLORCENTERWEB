@@ -5,6 +5,7 @@
 import {
   BoxGeometry,
   BufferGeometry,
+  CircleGeometry,
   CylinderGeometry,
   ExtrudeGeometry,
   Group,
@@ -23,6 +24,8 @@ export interface CarMaterials {
   paint: Material;
   glass: Material;
   trim: Material;
+  /** Interior oscuro de los pasos de rueda (visible por ambas caras). */
+  well: Material;
   chrome: Material;
   rubber: Material;
   rimDark: Material;
@@ -237,13 +240,26 @@ function addDetails(car: Group, spec: CarSpec, m: CarMaterials): void {
   place(car, rounded([0.06, 0.1, spec.width * 0.7], 0.03), m.trim, spec.rearFaceX + 0.02, spec.bottomY + 0.1, 0);
 }
 
+/**
+ * Cuatro ruedas independientes. Cada una tiene su propio paso de rueda: un cilindro
+ * corto abierto y una tapa interior que impide ver a través de la carrocería.
+ */
 function addWheels(car: Group, spec: CarSpec, m: CarMaterials): void {
   const half = spec.width / 2;
-  const linerGeometry = new CylinderGeometry(spec.archRadius - 0.015, spec.archRadius - 0.015, spec.width - 0.14, 28);
+  const wellRadius = spec.archRadius - 0.012;
+  const wellDepth = spec.tireWidth + 0.16;
+  // Solo la mitad superior (más un margen): la parte de abajo quedaría a la vista bajo la carrocería.
+  const margin = 0.2;
+  const wellGeometry = new CylinderGeometry(wellRadius, wellRadius, wellDepth, 24, 1, true, Math.PI / 2 - margin, Math.PI + 2 * margin);
+  const capGeometry = new CircleGeometry(wellRadius, 24, -margin, Math.PI + 2 * margin);
   spec.axles.forEach((x) => {
-    const liner = place(car, linerGeometry, m.trim, x, spec.wheelRadius, 0);
-    liner.rotation.x = Math.PI / 2;
     [1, -1].forEach((s) => {
+      // El borde exterior queda 2 cm dentro del costado para no coincidir con la carrocería.
+      const wellCenterZ = s * (half - wellDepth / 2 - 0.02);
+      const well = place(car, wellGeometry, m.well, x, spec.wheelRadius, wellCenterZ);
+      well.rotation.x = Math.PI / 2;
+      place(car, capGeometry, m.well, x, spec.wheelRadius, s * (half - wellDepth - 0.02));
+
       const wheel = buildWheel(spec, m);
       wheel.position.set(x, spec.wheelRadius, s * (half - spec.tireWidth / 2 - 0.03));
       if (s < 0) wheel.rotation.y = Math.PI;

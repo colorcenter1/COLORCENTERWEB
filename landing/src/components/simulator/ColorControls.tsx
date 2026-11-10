@@ -80,6 +80,17 @@ interface CustomColorProps {
 export function CustomColor({ currentHex, onApply }: CustomColorProps) {
   const [draft, setDraft] = useState(currentHex.toUpperCase());
   const [hasError, setHasError] = useState(false);
+  const [syncedHex, setSyncedHex] = useState(currentHex);
+
+  // Si el color cambia desde la paleta, se refleja en el campo sin desmontarlo
+  // (desmontarlo cerraba el selector nativo mientras se arrastraba).
+  if (currentHex !== syncedHex) {
+    setSyncedHex(currentHex);
+    if (normalizeHex(draft) !== currentHex) {
+      setDraft(currentHex.toUpperCase());
+      setHasError(false);
+    }
+  }
   const pickerId = useId();
   const hexId = useId();
   const errorId = useId();

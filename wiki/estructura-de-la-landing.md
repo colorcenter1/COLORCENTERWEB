@@ -15,11 +15,11 @@ Estructura aprobada en `PLAN TRABAJO.md` e implementada el 2026-11-10. El propie
 | 1 | Encabezado | Logo, Productos, Simulador, Cómo comprar, Ubicación, WhatsApp; menú móvil | `layout/SiteHeader.tsx` |
 | 2 | Portada | «Pinturas e insumos automotrices en Valledupar»; «Consultar productos» (WhatsApp) y «Probar colores» (activa el simulador); abanico gráfico con los 20 tonos | `hero/Hero.tsx` |
 | 3 | Simulador | Vista plana ligera hasta activar el 3D; carrocería, paleta, color libre, aviso de vista aproximada y consulta por WhatsApp | `simulator/` |
-| 4 | Productos | Seis categorías del plan; cada una abre WhatsApp con mensaje propio; sin fotos ni referencias no confirmadas | `sections/Products.tsx` |
+| 4 | Productos | Vitrina en seis categorías con los ocho productos confirmados (pinturas automotrices, barnices, catalizadores, lijas, cintas de enmascarar, pistolas de pintura, ceras y complementos), su uso y botón «Consultar» propio; botón para consultar una lista; sin marcas, precios ni fotos no confirmadas | `sections/Products.tsx` |
 | 5 | Asesoría | Qué compartir al consultar; aclara que la aplicación depende del cliente o su pintor | `sections/Advice.tsx` |
 | 6 | Cómo comprar | Consultar → confirmar precio/disponibilidad → recoger en sede | `sections/HowToBuy.tsx` |
 | 7 | Preguntas | Seis respuestas limitadas a lo acordado, incluida la aclaración de que no se prestan servicios | `sections/Faq.tsx` |
-| 8 | Ubicación | Dirección de la ficha de Maps, enlace exacto, WhatsApp y cierre | `sections/Location.tsx` |
+| 8 | Ubicación | Dirección de la ficha de Maps, mapa de Google incrustado (carga diferida), enlace exacto, WhatsApp y cierre | `sections/Location.tsx` |
 | 9 | Pie | Contacto, navegación y aclaraciones; sin enlaces legales porque aún no existen | `layout/SiteFooter.tsx` |
 
 Además, en móvil hay un botón fijo «Consultar por WhatsApp».
