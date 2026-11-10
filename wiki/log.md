@@ -75,3 +75,6 @@ fuentes: [../AGENTS.md, ../landing/package.json, ../landing/src/data/mockData.ts
 - Prerender con React en la compilación; JSON-LD `Store` con datos confirmados; canónica y sitemap pendientes del dominio.
 - Verificado localmente: tipos, 16 pruebas, compilación, 320–1440 px, teclado, movimiento reducido, contraste, simulador y fallos del visor, ausencia de descargas 3D antes del clic, enlaces de Maps/WhatsApp (sin enviar), LCP 0,76–1,20 s y CLS 0,037 con condiciones móviles simuladas. No publicado; sin push.
 - Consultar [[estado-del-proyecto]], [[estructura-de-la-landing]], [[decisiones]], [[pendientes]] y [[documentos-y-activos]].
+
+## [2026-11-10] validación | Vehículos 3D aprobados
+- El propietario aprobó el aspecto de los vehículos 3D propios del simulador. Se actualizaron [[decisiones]], [[pendientes]], [[estado-del-proyecto]] y [[documentos-y-activos]]. Sin cambios de código ni publicación.

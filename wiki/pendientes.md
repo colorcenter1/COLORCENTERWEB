@@ -31,7 +31,6 @@ fuentes: [../landing/README.md, ../landing/package.json]
 - **Fotos propias:** al llegar a `Docs/`, revisar y valorar su uso en portada, productos y ubicación.
 - **Marcas y referencias de producto:** no se muestran; incorporar solo con catálogo confirmado. Revisar también si la mención a Sherwin-Williams se puede respaldar.
 - **Validar la paleta** de 20 tonos con la carta del negocio, en especial «Gris ratón» y «Negro nebuloso». Siguen siendo orientativos.
-- **Revisar los vehículos 3D propios** en la vista local; los ajustes de forma son cambios de medidas en `landing/src/components/simulator/carSpecs.ts`.
 - **Enlaces legales:** no existen; la página no recoge datos personales. Si se añade un formulario, aplicar la skill `tratamiento-datos-landing`.
 - **Calculadora de cantidades:** fuera de la versión pública hasta validar coeficientes.
 - **Resueltos el 2026-11-10:** testimonios de muestra, imagen rota de Masillas, solapamientos de cabecera y skills de diseño (instaladas).

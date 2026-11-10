@@ -21,3 +21,4 @@ fuentes: [../AGENTS.md, ../landing/package.json, ../landing/src/components/Testi
 - **Confirmado por el propietario, 2026-11-10:** ante la falta de modelos realistas gratuitos sin cuenta, el propietario pidió crear modelos 3D propios «realistas, no muy sofisticados, mejores que lo actual». Se modelaron sedán, hatchback y pickup por código; se descartó el set CC0 low-poly de rgsdev y no se integró ningún activo de terceros.
 - **Decisión técnica, 2026-11-10:** prerender con React (`renderToString`) en la compilación de Vite, sin migrar de framework; Three.js y los vehículos en un fragmento cargado al pulsar «Probar colores».
 - **Superado, 2026-11-10:** la decisión pendiente sobre testimonios se resolvió retirándolos; no hay testimonios aprobados.
+- **Confirmado por el propietario, 2026-11-10:** aprueba el aspecto de los vehículos 3D propios (sedán, hatchback y pickup) tal como quedaron.
