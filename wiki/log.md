@@ -92,3 +92,7 @@ fuentes: [../AGENTS.md, ../landing/package.json, ../landing/src/data/mockData.ts
 
 ## [2026-11-11] despliegue | Enlace provisional en Vercel
 - Con la sesión de Vercel del propietario se creó el proyecto `color-center-landing` y se desplegó la compilación verificada: https://color-center-landing.vercel.app. Comprobado en navegador sin sesión (ver [[estado-del-proyecto]]). No indexable mientras haya testimonios de referencia; sin dominio, costos ni push a GitHub.
+
+## [2026-11-11] repositorio | Push a GitHub
+- Por indicación del propietario se subieron a `origin/main` (github.com/colorcenter1/COLORCENTERWEB) los commits del rediseño, de `4685827` a `9c01d72`. Antes se verificó que no hubiera secretos, dependencias ni compilados versionados; `Docs/` y la etiqueta local `antes-del-rediseno` no se subieron.
+- Siguiente paso: esperar la validación del cliente sobre https://color-center-landing.vercel.app y continuar con sus comentarios.
