@@ -89,3 +89,6 @@ fuentes: [../AGENTS.md, ../landing/package.json, ../landing/src/data/mockData.ts
 - Simulador reorganizado; paleta en dos columnas de tres familias; carrusel de cinco testimonios de referencia (por instrucción expresa, sin rótulo; pendiente de sustitución, ver [[decisiones]] y [[pendientes]]).
 - Verificado localmente (ver [[estado-del-proyecto]]). Commit `78263c7`.
 - Despliegue anónimo en Vercel creado con salida precompilada; responde 403 y caduca en una hora. Pendiente: sesión del propietario en Vercel para un enlace provisional usable. Sin dominio ni costos.
+
+## [2026-11-11] despliegue | Enlace provisional en Vercel
+- Con la sesión de Vercel del propietario se creó el proyecto `color-center-landing` y se desplegó la compilación verificada: https://color-center-landing.vercel.app. Comprobado en navegador sin sesión (ver [[estado-del-proyecto]]). No indexable mientras haya testimonios de referencia; sin dominio, costos ni push a GitHub.
