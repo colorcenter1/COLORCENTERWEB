@@ -66,6 +66,10 @@ export function ColorSimulator({ isActive, onActivate }: ColorSimulatorProps) {
         </div>
 
         <div className="sim-layout">
+          <div className="sim-body">
+            <BodySelector value={bodyId} onChange={setBodyId} />
+          </div>
+
           <div ref={stageRef} className="stage" role="region" aria-label="Vista del simulador" tabIndex={-1}>
             {isActive ? (
               <StageErrorBoundary>
@@ -89,8 +93,7 @@ export function ColorSimulator({ isActive, onActivate }: ColorSimulatorProps) {
             )}
           </div>
 
-          <div className="sim-controls">
-            <BodySelector value={bodyId} onChange={setBodyId} />
+          <div className="sim-colors">
             <PalettePicker
               selectedToneId={selection.kind === 'tone' ? selection.toneId : null}
               onSelect={(toneId) => setSelection({ kind: 'tone', toneId })}
@@ -107,7 +110,9 @@ export function ColorSimulator({ isActive, onActivate }: ColorSimulatorProps) {
                 {body.label} · {finishText}
               </p>
             </div>
+          </div>
 
+          <div className="sim-cta">
             <a className="btn btn-primary" href={inquiryUrl} target="_blank" rel="noopener noreferrer">
               <MessageCircle size={18} aria-hidden="true" />
               Consultar este color por WhatsApp

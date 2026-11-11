@@ -8,6 +8,7 @@ import { Faq } from './components/sections/Faq';
 import { HowToBuy } from './components/sections/HowToBuy';
 import { Location } from './components/sections/Location';
 import { Products } from './components/sections/Products';
+import { Testimonials } from './components/sections/Testimonials';
 import { ColorSimulator } from './components/simulator/ColorSimulator';
 
 export default function App() {
@@ -26,6 +27,7 @@ export default function App() {
         <Products />
         <Advice />
         <HowToBuy />
+        <Testimonials />
         <Faq />
         <Location />
       </main>

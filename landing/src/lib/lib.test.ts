@@ -2,6 +2,7 @@ import { describe, expect, it } from 'vitest';
 import { ALL_TONES, COLOR_DISCLAIMER, PALETTE, findTone } from '../data/palette';
 import { ALL_PRODUCTS, CATEGORIES, FAQ } from '../data/catalog';
 import { BODY_MODELS, findBody } from '../components/simulator/models';
+import { TESTIMONIALS } from '../data/testimonials';
 import { normalizeHex, readableTextOn, relativeLuminance } from './color';
 import { colorInquiry, generalInquiry, productInquiry, whatsappUrl } from './whatsapp';
 
@@ -112,5 +113,14 @@ describe('contenido acordado', () => {
   it('expone las tres carrocerías', () => {
     expect(BODY_MODELS.map((b) => b.id)).toEqual(['sedan', 'hatchback', 'pickup']);
     expect(findBody('pickup').label).toBe('Pickup');
+  });
+
+  it('tiene cinco testimonios completos y con id único', () => {
+    expect(TESTIMONIALS).toHaveLength(5);
+    expect(new Set(TESTIMONIALS.map((t) => t.id)).size).toBe(5);
+    TESTIMONIALS.forEach((t) => {
+      expect(t.quote.length).toBeGreaterThan(20);
+      expect(t.name).not.toBe('');
+    });
   });
 });
