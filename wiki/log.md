@@ -84,3 +84,8 @@ fuentes: [../AGENTS.md, ../landing/package.json, ../landing/src/data/mockData.ts
 - Sección de productos convertida en vitrina con los ocho productos confirmados y consulta individual; sin marcas ni precios no confirmados.
 - Mapa de Google Maps incrustado con carga diferida, por decisión del propietario.
 - Verificado localmente (ver [[estado-del-proyecto]]); sin publicación ni push. Decisiones en [[decisiones]].
+
+## [2026-11-11] ajuste y despliegue | Simulador, paleta, testimonios y Vercel
+- Simulador reorganizado; paleta en dos columnas de tres familias; carrusel de cinco testimonios de referencia (por instrucción expresa, sin rótulo; pendiente de sustitución, ver [[decisiones]] y [[pendientes]]).
+- Verificado localmente (ver [[estado-del-proyecto]]). Commit `78263c7`.
+- Despliegue anónimo en Vercel creado con salida precompilada; responde 403 y caduca en una hora. Pendiente: sesión del propietario en Vercel para un enlace provisional usable. Sin dominio ni costos.

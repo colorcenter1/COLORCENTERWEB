@@ -34,3 +34,5 @@ fuentes: [../landing/README.md, ../landing/package.json]
 - **Enlaces legales:** no existen; la página no recoge datos personales. Si se añade un formulario, aplicar la skill `tratamiento-datos-landing`.
 - **Calculadora de cantidades:** fuera de la versión pública hasta validar coeficientes.
 - **Resueltos el 2026-11-10:** testimonios de muestra, imagen rota de Masillas, solapamientos de cabecera y skills de diseño (instaladas).
+- **Testimonios (bloqueante para el lanzamiento público):** sustituir los cinco textos de referencia de `landing/src/data/testimonials.ts` por testimonios reales con autorización de cada cliente. Hasta entonces, mantener el enlace provisional con `noindex`.
+- **Vercel:** el despliegue anónimo del 2026-11-11 (`flying-ocarina-sp5ilk1.tmp.now`) responde 403 a todos los navegadores y caduca en una hora si no se reclama. Para un enlace provisional usable, el propietario debe iniciar sesión (`npx vercel login`) y desplegar en su cuenta. Al lanzar con dominio real, quitar la cabecera `noindex` de `landing/vercel.json`.
