@@ -134,3 +134,11 @@ fuentes: [../AGENTS.md, ../landing/package.json, ../landing/src/data/mockData.ts
 - El propietario eligió comparar la misma categoría entre Sherwin-Williams, baslac y Autolack, y pidió incluir descripciones breves de la función de las opciones.
 - La interfaz se cambió a diez filtros por categoría; cada filtro muestra tres tarjetas con región de fuente, resumen de función, productos listados, fuente oficial y consulta por WhatsApp. Las tarjetas dejan claro cuando la fuente no publica una línea.
 - Los resúmenes no son fichas de aplicación ni confirman compatibilidad; se mantienen referencias oficiales para ampliar detalles. Falta build/revisión visual por ausencia de `vite` y `tsc` local.
+
+## [2026-11-19] GitHub | Sincronización autorizada
+- El propietario pidió guardar los cambios en GitHub y autorizó actualizar lo necesario. Se verificó el remoto y se confirmó que `main` estaba seis commits adelante, sin commits remotos nuevos.
+- Se subieron los seis commits a `origin/main`; sincronización posterior confirmó `main` y `origin/main` en `7b318cb` (0 adelante/0 atrás). `Docs/` está ignorada y seis archivos sueltos del plan permanecen sin seguimiento, por lo que no se incluyeron.
+
+## [2026-11-19] diferenciación | Ideas interactivas ligeras
+- Se revisaron páginas públicas de distribuidores colombianos: ATR organiza categorías por especialidad y permite cotizar por WhatsApp; Metallanos filtra productos por línea y dirige consultas a WhatsApp; Mostry ofrece un orientador de cinco preguntas y cálculos de producto.
+- Propuesta inicial para Color Center: lista ligera de varios productos y una sola consulta de cotización por WhatsApp, sin pago ni cuenta. Alternativas: filtro de productos según tipo de trabajo o una guía para ubicar el código de color. Ninguna se registra como decisión del propietario.
