@@ -104,3 +104,7 @@ fuentes: [../AGENTS.md, ../landing/package.json, ../landing/src/data/mockData.ts
 - No se incorporó `Docs/` a Git. Build, lint y vista previa tras el cambio pendientes; no se publicó ni se subió trabajo nuevo al remoto.
 - Los cambios de página e inventario se guardaron localmente en el commit `7d1c4b9` («Actualiza landing con activos de Docs»). La rama quedó un commit delante de GitHub; no se hizo push.
 - Estado técnico y respaldo registrados en `6bd8265`; la wiki confirma el estado final de rama con dos commits locales y conserva el stash anterior.
+
+## [2026-11-19] contacto | WhatsApp oficial confirmado
+- El propietario confirmó `+57 300 442 6477` como número oficial. `landing/src/data/business.ts` y el helper ya usan ese número; las consultas preparan mensajes generales, por producto y por color.
+- Se actualizó empresa, decisiones, pendientes, plan de mejoras y AGENTS. Paso 5 queda parcialmente verificado por inspección estática; sigue pendiente la prueba interactiva móvil porque no se pudo abrir la vista local. No se envió mensaje.

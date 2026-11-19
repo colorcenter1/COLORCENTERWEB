@@ -59,6 +59,8 @@ Guarda este archivo en la carpeta de tu página, junto al código. Pídele a tu 
   **Necesitas en Docs:** número de WhatsApp oficial.
   **Quedó bien si:** la consulta llega a tu WhatsApp diciendo qué producto le interesa al cliente.
 
+  **Avance 2026-11-19:** propietario confirmó el número oficial `+57 300 442 6477`. En el código, los botones generales, las fichas de producto y el simulador usan el helper central de WhatsApp; las fichas preparan el nombre del producto y el simulador prepara carrocería/color. El paso sigue abierto hasta probar los botones en la vista local desde un celular.
+
 - [ ] **Paso 6 · Pulido visual** *(Nivel de modelo: alto)*
 
   > Lee `plan-mejoras.md` y haz solo el paso 6. Usa la skill emil-design-eng para que la página sea fácil de usar: botones claros, catálogo ordenado y contacto siempre a mano. No cambies contenidos, logo ni colores de la marca.

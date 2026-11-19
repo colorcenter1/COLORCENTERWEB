@@ -2,7 +2,7 @@
 tipo: decisiones
 estado: vigente
 creado: 2026-11-06
-actualizado: 2026-11-10
+actualizado: 2026-11-19
 tags: [decisiones]
 fuentes: [../AGENTS.md, ../landing/package.json, ../landing/src/components/TestimonialsSection.tsx]
 ---
@@ -28,3 +28,4 @@ fuentes: [../AGENTS.md, ../landing/package.json, ../landing/src/components/Testi
 - **Confirmado por el propietario, 2026-11-11:** simulador con la carrocería encima del visor 3D, el botón de WhatsApp debajo y solo lo referente al color a la derecha; paleta en dos columnas de tres familias, cada una en una línea.
 - **Indicación del propietario, 2026-11-11:** añadir cinco testimonios en carrusel (uno cada 20 s) entre «Cómo comprar» y «Preguntas frecuentes», con textos de referencia **sin rotularlos como tales**, para sustituirlos por los reales cuando el cliente los entregue. Contradice la regla de `AGENTS.md` de no publicar testimonios inventados como hechos: se aplicó por instrucción expresa y se mitiga con un enlace provisional no indexable (`X-Robots-Tag: noindex`), sin reseñas en datos estructurados y con el pendiente registrado. **No lanzar públicamente sin reemplazarlos.**
 - **Autorizado por el propietario, 2026-11-11:** despliegue provisional en Vercel para validación del cliente. Sin dominio propio ni costos.
+- **Confirmado por el propietario, 2026-11-19:** WhatsApp oficial `+57 300 442 6477`. Fuente: conversación; el valor coincide con `landing/src/data/business.ts`.

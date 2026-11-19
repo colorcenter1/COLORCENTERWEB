@@ -3,7 +3,7 @@
  *
  * Estado de cada dato (ver wiki/empresa.md):
  * - name, address, mapsUrl, geo: confirmados con la ficha de Google Maps compartida por el propietario.
- * - whatsappNumber: procede del prototipo; pendiente de confirmación del propietario.
+ * - whatsappNumber: confirmado por el propietario el 2026-11-19.
  * - Horario y teléfono fijo: no se publican porque no están confirmados.
  */
 export const BUSINESS = {

@@ -25,7 +25,7 @@ fuentes: [../landing/README.md, ../landing/package.json]
 - **Fuentes tras reorganización:** `Docs/Logo.jpg` estuvo presente en la revisión del 2026-11-10, pero no aparece en la revisión del 2026-11-19; inventario y materiales nuevos constan en [[documentos-y-activos]].
 
 ## Tras el rediseño (2026-11-10)
-- **Confirmar el número de WhatsApp** `+57 300 442 6477` (viene del prototipo y se usa en todos los enlaces).
+- **WhatsApp, resuelto 2026-11-19:** propietario confirmó como oficial `+57 300 442 6477`; el helper de enlaces usa ese número y crea consultas generales, por producto y por color. Falta prueba interactiva desde celular, que requiere vista previa funcionando.
 - **Horario de atención:** no se publica hasta confirmarlo; la ficha de Maps tampoco lo tiene. Valorar reclamar/verificar la ficha de Google (acción del propietario con su cuenta) y añadir teléfono y horario allí.
 - **Dominio real:** necesario para canónica, `og:url`, imagen para redes y sitemap. Publicación no autorizada todavía.
 - **Fotos propias:** al llegar a `Docs/`, revisar y valorar su uso en portada, productos y ubicación.

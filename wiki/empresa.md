@@ -28,7 +28,7 @@ fuentes: [../PLAN%20TRABAJO.md, "https://maps.app.goo.gl/p52X8eboDhx3h83GA", ../
 - **Pendiente:** confirmar productos disponibles, marcas, precios, cobertura, rendimientos y afirmaciones técnicas con catálogo aprobado. No usar cifras técnicas del mock data como hechos verificados.
 
 ## Canales y preferencias
-- **Provisional (procede del prototipo):** WhatsApp `+57 300 442 6477` (`wa.me/573004426477`), usado en todos los enlaces de consulta. Confirmar con el propietario. El horario del prototipo ya no se publica por no estar confirmado.
+- **Confirmado por el propietario (2026-11-19):** WhatsApp `+57 300 442 6477` (`wa.me/573004426477`) es el canal oficial para consultas. El horario no se publica porque sigue pendiente de confirmación.
 - **Confirmado por el propietario (2026-11-12):** `colorcenter.valledupar@gmail.com` es el correo para consultas y solicitudes sobre datos personales.
 - **Confirmado por instrucciones del propietario:** experiencia conversacional en español claro, tono cercano y profesional; preservar contenido aprobado; hacer cambios pequeños y mostrar verificación; no inventar afirmaciones ni publicar sin autorización.
 - **Pendiente:** empresa, públicos, identidad y datos de contacto requieren confirmación mediante material original de `Docs/`.
