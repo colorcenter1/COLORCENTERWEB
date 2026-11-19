@@ -3,41 +3,57 @@ import { ArrowUpRight, MessageCircle } from 'lucide-react';
 import { BRAND_CATALOGS } from '../../data/brandCatalogs';
 import { productInquiry, whatsappUrl } from '../../lib/whatsapp';
 
+const CATEGORY_NAMES = BRAND_CATALOGS[0].categories.map(({ name }) => name);
+
 export function BrandCatalog() {
-  const [brandId, setBrandId] = useState(BRAND_CATALOGS[0].id);
-  const brand = BRAND_CATALOGS.find((item) => item.id === brandId) ?? BRAND_CATALOGS[0];
+  const [categoryName, setCategoryName] = useState(CATEGORY_NAMES[0]);
 
   return (
     <section className="section brand-catalog" aria-labelledby="brand-catalog-title">
       <div className="wrap">
         <div className="section-head">
-          <h2 id="brand-catalog-title">Catálogos por marca</h2>
-          <p className="lede">Explora las líneas que aparecen en fuentes oficiales. Un asesor confirma qué referencias, precios y existencias están disponibles en Color Center.</p>
+          <h2 id="brand-catalog-title">Compara productos por categoría</h2>
+          <p className="lede">
+            Elige qué necesitas y revisa qué publica cada marca. Las descripciones resumen la función indicada por el fabricante; un asesor confirma referencias, precio y existencia en Color Center.
+          </p>
         </div>
         <figure className="brand-catalog-photo">
           <img src="/catalog/proceso-pintura-ilustrativo.jpg" alt="Aplicación ilustrativa de pintura automotriz con pistola" width="1200" height="1800" loading="lazy" decoding="async" />
           <figcaption>Foto ilustrativa de proceso, no corresponde a un producto de las marcas listadas. Gustavo Fring / Pexels.</figcaption>
         </figure>
-        <div className="brand-tabs" role="group" aria-label="Selecciona una marca">
-          {BRAND_CATALOGS.map((item) => (
-            <button key={item.id} type="button" aria-pressed={brand.id === item.id} className="brand-tab" onClick={() => setBrandId(item.id)}>{item.name}</button>
+        <div className="brand-category-filters" role="group" aria-label="Compara una categoría entre marcas">
+          {CATEGORY_NAMES.map((name) => (
+            <button key={name} type="button" className="brand-filter" aria-pressed={categoryName === name} onClick={() => setCategoryName(name)}>{name}</button>
           ))}
-          <span className="brand-tab brand-tab-pending" aria-disabled="true" title="Pendiente de confirmar la marca">Autolac · por confirmar</span>
         </div>
-        <p className="brand-region-note">{brand.regionNote}</p>
+        <h3 className="brand-comparison-title">{categoryName} por marca</h3>
         <div className="brand-catalog-grid">
-          {brand.categories.map((category) => (
-            <article className="brand-category" key={category.name}>
-              <h3>{category.name}</h3>
-              {category.products.length ? (
-                <ul>{category.products.map((product) => <li key={product}>{product}</li>)}</ul>
-              ) : <p>La fuente consultada no muestra una línea de esta categoría.</p>}
-              <a className="brand-source" href={category.source} target="_blank" rel="noopener noreferrer">Ver fuente oficial <ArrowUpRight size={15} aria-hidden="true" /></a>
-              <a className="brand-inquiry" href={whatsappUrl(productInquiry(`${brand.name}: ${category.name}`))} target="_blank" rel="noopener noreferrer"><MessageCircle size={16} aria-hidden="true" /> Consultar esta categoría</a>
-            </article>
-          ))}
+          {BRAND_CATALOGS.map((brand) => {
+            const category = brand.categories.find(({ name }) => name === categoryName);
+            const products = category?.products ?? [];
+            return (
+              <article className={`brand-category${products.length ? '' : ' is-unlisted'}`} key={brand.id}>
+                <h3>{brand.name}</h3>
+                <p className="brand-market-note">{brand.regionNote}</p>
+                <p className="brand-function">{category?.summary ?? 'La fuente consultada no describe esta categoría.'}</p>
+                {products.length ? (
+                  <ul>{products.map((product) => <li key={product}>{product}</li>)}</ul>
+                ) : (
+                  <p className="brand-unlisted">La fuente oficial consultada no lista productos de esta categoría.</p>
+                )}
+                {category && (
+                  <a className="brand-source" href={category.source} target="_blank" rel="noopener noreferrer">
+                    Ver fuente oficial <ArrowUpRight size={15} aria-hidden="true" />
+                  </a>
+                )}
+                <a className="brand-inquiry" href={whatsappUrl(productInquiry(`${brand.name}: ${categoryName}`))} target="_blank" rel="noopener noreferrer">
+                  <MessageCircle size={16} aria-hidden="true" /> Preguntar por WhatsApp
+                </a>
+              </article>
+            );
+          })}
         </div>
-        <p className="brand-catalog-disclaimer">Las fotos y nombres de envases de fabricante no se reutilizan aquí porque sus derechos no están abiertos. Las listas son informativas; no son confirmación de distribución, inventario ni compatibilidad local.</p>
+        <p className="brand-catalog-disclaimer">Las listas y funciones son informativas y resumen fuentes oficiales regionales; no confirman distribución, inventario ni compatibilidad local. Las fotos y nombres de envases de fabricante no se reutilizan aquí porque sus derechos no están abiertos.</p>
       </div>
     </section>
   );

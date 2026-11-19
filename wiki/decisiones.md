@@ -11,8 +11,11 @@ fuentes: [../AGENTS.md, ../landing/package.json, ../landing/src/components/Testi
 ## 2026-11-19 — Catálogo de marcas, fuentes y alcance
 - **Confirmado por fuente:** iniciar con catálogos informativos Sherwin-Williams y baslac y enlazar cada categoría a su fuente oficial. Las fuentes son Brasil y EMEA respectivamente; no equivalen a inventario confirmado de Valledupar.
 - **Decisión de implementación:** solo se reutiliza una foto de proceso de Pexels con licencia gratuita declarada, con crédito, y se identifica como ilustrativa. No se usan fotos de packshots de fabricante sin licencia clara.
-- **Pendiente del propietario:** precisar el nombre “Autolac” entre la línea AUTOLAC de Pinturas Everest y la empresa colombiana Industrias Autolack S.A.S.
+- **Confirmado por el propietario (respuesta 2):** el tercer catálogo corresponde a Industrias Autolack S.A.S. de Colombia, no a la línea AUTOLAC de Pinturas Everest. Se añadió su información oficial visible; no se suponen referencias ni categorías no expuestas por su índice público.
+- **Confirmado por el propietario:** vende familias 1–4 de la pregunta de ampliación: catalizadores/endurecedores/aditivos, auxiliares/limpiadores, pulido/accesorios y aerosoles/herramientas. Estas familias se añadieron a las tres marcas solo cuando cada catálogo oficial las respalda; otras quedan marcadas como no listadas en la fuente.
+- **Preferencia de exploración confirmada (respuesta “1”):** comparar la misma categoría entre marcas. Se muestran tres tarjetas, una por fabricante, con región, opciones publicadas y una función breve resumida. Los textos no sustituyen fichas técnicas ni confirman compatibilidades.
 - Fuente y estado: [[catalogo-por-marcas]], `landing/src/data/brandCatalogs.ts`, páginas oficiales enlazadas en esa página.
+- **Preferencia de proceso, confirmada por el propietario:** revisar páginas oficiales y consultar qué categorías adicionales corresponden al negocio antes de agregarlas; el propietario irá confirmando por etapas. No asumir inventario por el catálogo del fabricante.
 
 ## 2026-11-19 — Auto conceptual 3D en simulador
 - **Confirmado por el propietario:** opción 1, modelo 3D genérico realista sin marca.

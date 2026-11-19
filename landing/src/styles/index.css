@@ -622,17 +622,49 @@ button.brand-tab {
   border-color: var(--brand);
 }
 
-.brand-tab-pending {
-  border-style: dashed;
-  color: var(--muted);
-  background: transparent;
-}
-
 .brand-region-note,
 .brand-catalog-disclaimer {
   color: var(--muted);
   font-size: var(--text-sm);
   max-width: 78ch;
+}
+
+.brand-category-filters {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.45rem;
+  margin-block: 1.1rem;
+}
+
+.brand-comparison-title {
+  margin: 0.9rem 0 0.4rem;
+  font-size: 1.35rem;
+}
+
+.brand-filter-label {
+  margin-right: 0.25rem;
+  color: var(--muted);
+  font-size: var(--text-sm);
+  font-weight: 700;
+}
+
+.brand-filter {
+  min-height: 2.4rem;
+  padding: 0.45rem 0.8rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--white);
+  color: var(--brand);
+  font: inherit;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+.brand-filter[aria-pressed='true'] {
+  border-color: var(--brand-2);
+  background: color-mix(in srgb, var(--brand-2) 9%, white);
+  font-weight: 750;
 }
 
 .brand-catalog-photo {
@@ -678,6 +710,27 @@ button.brand-tab {
 
 .brand-category h3 {
   font-size: 1.2rem;
+}
+
+.brand-market-note {
+  color: var(--muted);
+  font-size: 0.8rem;
+}
+
+.brand-function {
+  font-size: var(--text-sm);
+}
+
+.brand-unlisted {
+  padding: 0.8rem;
+  border: 1px dashed var(--line);
+  border-radius: var(--radius-sm);
+  color: var(--muted);
+  font-size: var(--text-sm);
+}
+
+.brand-category.is-unlisted {
+  background: color-mix(in srgb, var(--paper) 65%, white);
 }
 
 .brand-category ul {

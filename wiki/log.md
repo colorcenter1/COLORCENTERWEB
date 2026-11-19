@@ -114,3 +114,23 @@ fuentes: [../AGENTS.md, ../landing/package.json, ../landing/src/data/mockData.ts
 - Se añadieron catálogos interactivos de Sherwin-Williams (fuente regional Brasil) y baslac (EMEA), con categorías de pintura, barniz, masilla, primer, lijas/abrasivos y disolventes; cada sección lleva a su fuente oficial y permite consulta por WhatsApp. No se afirma disponibilidad local. Autolac sigue pendiente de aclarar entre Pinturas Everest (línea AUTOLAC) e Industrias Autolack S.A.S. de Colombia.
 - La fotografía ilustrativa de proceso de Gustavo Fring se incorporó desde Pexels con crédito; se revisó visualmente. Se descartó otra foto gratuita al detectar marcas ajenas en envase/auto. No se muestran envases de marca sin permiso.
 - `git diff --check` no informó problemas. `npm.cmd run lint` y `npm.cmd run build` no arrancaron porque faltan `tsc` y `vite` en `landing/node_modules`; no se reinstalaron dependencias. Por ello quedan pendientes build, revisión visual/funcional en escritorio/móvil y publicación.
+- El cambio de catálogo, simulador, activos y wiki quedó guardado en el commit local `043a393`. No se hizo push.
+- Estado Git después de guardar la memoria: `main` está seis commits por delante de `origin/main`; no se subió al remoto.
+
+## [2026-11-19] catálogo de marcas | Se confirma Industrias Autolack S.A.S.
+- El propietario respondió “2”: el tercer catálogo debe ser Industrias Autolack S.A.S. de Colombia. Se retiró el rótulo pendiente y se añadió al selector con las líneas oficiales que el sitio publica: Core Colors/poliéster, Azul Especial, Poliéster Premium, Barniz HS y auxiliares (masillas/solventes). Primers y lijas quedan como no confirmados en el índice público consultado.
+- Se actualizó la wiki y el inventario con la fuente oficial colombiana; el inventario regional de Sherwin-Williams y baslac continúa sujeto a confirmación de disponibilidad local.
+
+## [2026-11-19] interfaz de catálogo | Se revisan patrones y categorías adicionales
+- El propietario pidió aprovechar atributos útiles de las páginas oficiales para mejorar la interfaz y confirmar con él los productos adicionales antes de listarlos. Se documentaron patrones: taxonomía por familias en Sherwin-Williams, fichas con código/uso/enlaces técnicos en baslac y catálogo por líneas en Autolack.
+- Se envió una pregunta con las familias adicionales que aparecen en esas fuentes (aditivos/endurecedores, auxiliares/limpiadores, pulido, aerosoles/herramientas y madera/industrial/epóxica). Queda pendiente su confirmación antes de cambiar el catálogo.
+
+## [2026-11-19] catálogo de marcas | Se amplían familias 1–4
+- El propietario confirmó que vende catalizadores/endurecedores/aditivos, auxiliares/limpiadores, pulido/accesorios y aerosoles/pistolas/herramientas, y pidió aplicar lo mismo a las otras dos marcas.
+- Se añadieron esos grupos a Sherwin-Williams, baslac e Industrias Autolack solo cuando el fabricante muestra esa línea; para los faltantes queda el texto de fuente no encontrada. La opción madera/industrial/epóxica sigue pendiente.
+- Se agregó filtro de categorías dentro del catálogo por marca para facilitar encontrar productos.
+
+## [2026-11-19] catálogo comparativo | Selección por categoría entre marcas
+- El propietario eligió comparar la misma categoría entre Sherwin-Williams, baslac y Autolack, y pidió incluir descripciones breves de la función de las opciones.
+- La interfaz se cambió a diez filtros por categoría; cada filtro muestra tres tarjetas con región de fuente, resumen de función, productos listados, fuente oficial y consulta por WhatsApp. Las tarjetas dejan claro cuando la fuente no publica una línea.
+- Los resúmenes no son fichas de aplicación ni confirman compatibilidad; se mantienen referencias oficiales para ampliar detalles. Falta build/revisión visual por ausencia de `vite` y `tsc` local.
