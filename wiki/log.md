@@ -103,3 +103,4 @@ fuentes: [../AGENTS.md, ../landing/package.json, ../landing/src/data/mockData.ts
 - Se actualizó el catálogo de fuentes, la estructura y el estado del paso 3; paso 0 queda completado porque están las cinco skills instaladas. La vigencia/autorización de la foto y un logo limpio/fotos propias siguen pendientes.
 - No se incorporó `Docs/` a Git. Build, lint y vista previa tras el cambio pendientes; no se publicó ni se subió trabajo nuevo al remoto.
 - Los cambios de página e inventario se guardaron localmente en el commit `7d1c4b9` («Actualiza landing con activos de Docs»). La rama quedó un commit delante de GitHub; no se hizo push.
+- Estado técnico y respaldo registrados en `6bd8265`; la wiki confirma el estado final de rama con dos commits locales y conserva el stash anterior.
