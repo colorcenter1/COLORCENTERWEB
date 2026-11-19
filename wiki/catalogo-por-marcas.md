@@ -36,3 +36,9 @@ fuentes: [../landing/src/data/brandCatalogs.ts, https://sherwin-auto.com.br/en/p
 - Confirmar disponibilidad real y referencias en Valledupar antes de presentar estos productos como oferta de la tienda.
 - Si se desean fotos de envases exactos, obtener imágenes propias autorizadas o permiso de uso del fabricante/distribuidor.
 - baslac no tiene abrasivos, pulido o pistolas identificados en las páginas consultadas; Autolack tampoco publica referencias de primers, abrasivos, pulido o pistolas. Mantener los avisos de «sin línea confirmada».
+
+## Herramientas ligeras de exploración (implementadas localmente)
+- **Confirmado por el propietario (respuesta “1-2-3”):** avanzar con las tres ideas: cotización de varios productos por WhatsApp, guía breve para filtrar el catálogo y ayuda para consultar un color.
+- **Implementación:** la guía filtra categoría y marca, sin recomendar compatibilidad ni reemplazar al asesor. En las tarjetas se agregan o quitan productos de una lista temporal; un enlace prepara un mensaje de WhatsApp. No hay pago, cuenta, inventario automático ni almacenamiento de la lista.
+- **Color:** el simulador permite indicar un código de pintura opcional, incluido solo en el texto prellenado para WhatsApp. La página no guarda ese dato; la persona puede adjuntar una foto después de abrir WhatsApp.
+- **Pendiente de verificación:** compilación, revisión visual en escritorio/móvil y prueba de interacción cuando estén disponibles `vite` y `tsc` locales.

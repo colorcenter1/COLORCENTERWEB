@@ -142,3 +142,9 @@ fuentes: [../AGENTS.md, ../landing/package.json, ../landing/src/data/mockData.ts
 ## [2026-11-19] diferenciación | Ideas interactivas ligeras
 - Se revisaron páginas públicas de distribuidores colombianos: ATR organiza categorías por especialidad y permite cotizar por WhatsApp; Metallanos filtra productos por línea y dirige consultas a WhatsApp; Mostry ofrece un orientador de cinco preguntas y cálculos de producto.
 - Propuesta inicial para Color Center: lista ligera de varios productos y una sola consulta de cotización por WhatsApp, sin pago ni cuenta. Alternativas: filtro de productos según tipo de trabajo o una guía para ubicar el código de color. Ninguna se registra como decisión del propietario.
+
+## [2026-11-19] diferenciación | Se implementan las tres ideas elegidas
+- El propietario eligió «1-2-3»: cotización de varios productos en un solo WhatsApp, guía breve para filtrar el catálogo y consulta de color con código opcional.
+- Se añadieron las funciones al código existente de React/TypeScript. La lista y el código solo viven en el navegador y pasan a WhatsApp únicamente si el visitante decide abrir el enlace; no se añadieron pagos, cuentas ni backend.
+- Wiki actualizada: [[catalogo-por-marcas]], [[decisiones]], [[inventario-de-datos-web]] y [[estado-del-proyecto]].
+- Falta build/lint, revisión visual de escritorio/móvil y comprobación funcional debido a la disponibilidad local de `vite`/`tsc`.

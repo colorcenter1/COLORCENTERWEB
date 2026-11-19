@@ -35,6 +35,7 @@ interface ColorSimulatorProps {
 
 export function ColorSimulator({ isActive, onActivate }: ColorSimulatorProps) {
   const [selection, setSelection] = useState<Selection>({ kind: 'tone', toneId: DEFAULT_TONE_ID });
+  const [paintCode, setPaintCode] = useState('');
   const stageRef = useRef<HTMLDivElement>(null);
 
   // Al activar el 3D el botón desaparece: se lleva el foco al escenario para no perderlo.
@@ -54,7 +55,7 @@ export function ColorSimulator({ isActive, onActivate }: ColorSimulatorProps) {
     if (!isActive) onActivate();
   };
   const inquiryUrl = whatsappUrl(
-    colorInquiry({ bodyLabel: body.label, colorName: color.name, hex: color.hex, isCustom: color.isCustom }),
+    colorInquiry({ bodyLabel: body.label, colorName: color.name, hex: color.hex, isCustom: color.isCustom, paintCode }),
   );
   const finishText = color.isCustom ? 'color libre' : `acabado simulado ${FINISH_LABEL[color.finish]}`;
 
@@ -118,6 +119,10 @@ export function ColorSimulator({ isActive, onActivate }: ColorSimulatorProps) {
           </div>
 
           <div className="sim-cta">
+            <label className="paint-code-field" htmlFor="paint-code">¿Tienes el código de pintura? (opcional)
+              <input id="paint-code" type="text" maxLength={40} value={paintCode} onChange={(event) => setPaintCode(event.target.value)} placeholder="Ej.: código de la etiqueta del vehículo" />
+            </label>
+            <p className="paint-code-note">Si tienes una foto de la etiqueta o de una muestra, podrás adjuntarla en WhatsApp. El código se agrega al mensaje; no se guarda en esta página.</p>
             <a className="btn btn-primary" href={inquiryUrl} target="_blank" rel="noopener noreferrer">
               <MessageCircle size={18} aria-hidden="true" />
               Consultar este color por WhatsApp

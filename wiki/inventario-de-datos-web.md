@@ -2,7 +2,7 @@
 tipo: inventario-de-datos
 estado: revisión-técnica-inicial
 creado: 2026-11-10
-actualizado: 2026-11-12
+actualizado: 2026-11-19
 tags: [privacidad, datos-personales, landing]
 fuentes: [../landing/src/services/analytics.ts, ../landing/src/components/PaintCalculatorModal.tsx, ../landing/src/components/CarPaintSimulator.tsx, ../landing/src/components/ColorStudioModal.tsx, ../landing/src/components/StepsSection.tsx, ../landing/src/components/ProductCatalog.tsx, ../landing/index.html, ../.agents/skills/tratamiento-datos-landing/SKILL.md]
 ---
@@ -32,3 +32,10 @@ Revisión estática del código para preparar el Paso 9. No es una conclusión l
 ## Datos empresariales pendientes para la etapa de política
 
 En la revisión del 2026-11-12, `Docs/` estaba vacía. El propietario informó el 2026-11-12 que es persona natural, usa el nombre comercial Colorcenter Valledupar, señala como domicilio de privacidad la dirección publicada en la página y confirma `colorcenter.valledupar@gmail.com` para consultas de datos. La razón social/nombre legal completo y el cotejo de dirección con el RUT siguen pendientes. El NIT se compartió en el chat y no se copia a la wiki ni al repositorio; si deposita el RUT en `Docs/`, permanece excluida de Git. También falta conocer tratamientos fuera de la página (por ejemplo clientes atendidos en sede, empleados/proveedores, cámaras, publicidad, conservación y terceros). No publicar política con estos puntos incompletos.
+
+## Actualización estática 2026-11-19 — herramientas ligeras
+
+- **Catálogo y guía:** las selecciones de producto viven solo en el estado temporal de React mientras la página está abierta. Un enlace arma una lista para cotizar y el visitante decide si abre y envía el mensaje a WhatsApp. No pide nombre, documento, dirección u otro dato personal.
+- **Código de pintura:** campo opcional en el simulador, estado temporal de React; si la persona pulsa WhatsApp, se agrega al texto prellenado. La foto no se selecciona ni sube desde la web; podrá adjuntarse por decisión del visitante en WhatsApp.
+- **No se añadió:** base de datos, cuenta, formulario de contacto, envío automático, almacenamiento de la cotización/código ni pago.
+- Es una inspección estática del código fuente; falta comprobar DOM, comportamiento y solicitudes de red en navegador. Tratamientos fuera de la web y proveedores externos siguen pendientes; no se ha redactado ni publicado política.

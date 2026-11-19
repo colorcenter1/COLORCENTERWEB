@@ -22,9 +22,10 @@ export interface ColorInquiry {
   colorName: string;
   hex: string;
   isCustom: boolean;
+  paintCode?: string;
 }
 
-export function colorInquiry({ bodyLabel, colorName, hex, isCustom }: ColorInquiry): string {
+export function colorInquiry({ bodyLabel, colorName, hex, isCustom, paintCode = '' }: ColorInquiry): string {
   const colorLine = isCustom
     ? `Color personalizado elegido en el simulador: ${hex.toUpperCase()}.`
     : `Tono de la paleta orientativa: ${colorName}.`;
@@ -32,6 +33,7 @@ export function colorInquiry({ bodyLabel, colorName, hex, isCustom }: ColorInqui
     `${GREETING} Probé un color en el simulador de la web.`,
     `Carrocería: ${bodyLabel}.`,
     colorLine,
+    ...(paintCode.trim() ? [`Código de pintura indicado: ${paintCode.trim()}.`] : []),
     'Quisiera asesoría para conseguir pintura e insumos en un tono parecido.',
   ].join('\n');
 }

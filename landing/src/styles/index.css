@@ -637,6 +637,69 @@ button.brand-tab {
   margin-block: 1.1rem;
 }
 
+.catalog-guide {
+  padding: clamp(1rem, 3vw, 1.5rem);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: color-mix(in srgb, var(--paper) 68%, white);
+}
+
+.catalog-guide-heading,
+.quote-list-heading,
+.catalog-active-filters {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.catalog-guide-heading h3,
+.quote-list-heading h3 { margin: 0.25rem 0 0; }
+.catalog-guide-kicker { color: var(--brand-2); font-size: var(--text-sm); font-weight: 750; }
+.catalog-guide-options { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.6rem; margin-top: 1rem; }
+.catalog-guide-option {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  min-height: 2.85rem;
+  padding: 0.7rem 0.9rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  background: white;
+  color: var(--brand-deep);
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+.catalog-guide-option:hover, .catalog-guide-option:focus-visible { border-color: var(--brand-2); }
+.catalog-guide-reset, .quote-clear {
+  min-height: 2.75rem;
+  padding: 0.5rem 0.75rem;
+  border: 0;
+  background: transparent;
+  color: var(--brand-2);
+  font: inherit;
+  font-weight: 700;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.catalog-brand-options p { grid-column: 1 / -1; margin: 0; color: var(--muted); font-size: var(--text-sm); }
+.catalog-guide-done { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem 1rem; margin-top: 0.5rem; }
+.catalog-active-filters { align-items: end; flex-wrap: wrap; margin-block: 0.8rem; }
+.catalog-brand-select { display: grid; gap: 0.3rem; color: var(--muted); font-size: var(--text-sm); font-weight: 700; }
+.catalog-brand-select select { min-height: 2.7rem; max-width: 100%; padding: 0.5rem 2rem 0.5rem 0.75rem; border: 1px solid var(--line); border-radius: var(--radius-sm); background: white; color: var(--brand-deep); font: inherit; }
+.quote-list { margin-block: 1rem; padding: 1rem; border: 1px solid var(--brand-2); border-radius: var(--radius); background: white; }
+.quote-list-heading p, .quote-list-note { margin: 0.25rem 0 0; color: var(--muted); font-size: var(--text-sm); }
+.quote-list ul { display: grid; gap: 0.35rem; margin: 0.75rem 0; padding: 0; list-style: none; }
+.quote-list li { display: flex; align-items: center; justify-content: space-between; gap: 0.75rem; padding-block: 0.4rem; border-bottom: 1px solid var(--line); }
+.quote-list li button { display: grid; place-items: center; flex: 0 0 2.75rem; min-height: 2.75rem; border: 0; border-radius: 50%; background: transparent; color: var(--brand); cursor: pointer; }
+.quote-list .btn { margin-top: 0.8rem; }
+.catalog-product-choice { display: flex; align-items: center; flex-wrap: wrap; justify-content: space-between; gap: 0.4rem 0.75rem; }
+.catalog-add { display: inline-flex; align-items: center; justify-content: center; gap: 0.25rem; min-height: 2.75rem; padding: 0.4rem 0.5rem; border: 1px solid var(--line); border-radius: 999px; background: white; color: var(--brand-2); font: inherit; font-size: 0.8rem; font-weight: 700; cursor: pointer; }
+.catalog-add[aria-pressed='true'] { border-color: var(--brand-2); background: color-mix(in srgb, var(--brand-2) 9%, white); }
+.catalog-add:focus-visible, .catalog-guide-option:focus-visible, .quote-list button:focus-visible, .catalog-brand-select select:focus-visible { outline: 3px solid var(--brand-2); outline-offset: 2px; }
+
 .brand-comparison-title {
   margin: 0.9rem 0 0.4rem;
   font-size: 1.35rem;
@@ -764,6 +827,10 @@ button.brand-tab {
   padding-top: 0.5rem;
 }
 
+.paint-code-field { display: grid; gap: 0.4rem; max-width: 28rem; font-size: var(--text-sm); font-weight: 700; }
+.paint-code-field input { min-height: 2.85rem; padding: 0.65rem 0.8rem; border: 1px solid var(--line); border-radius: var(--radius-sm); background: white; color: var(--brand-deep); font: inherit; }
+.paint-code-note { max-width: 60ch; color: var(--muted); font-size: var(--text-sm); }
+
 @media (max-width: 900px) {
   .brand-catalog-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -771,6 +838,9 @@ button.brand-tab {
 }
 
 @media (max-width: 560px) {
+  .catalog-guide-options { grid-template-columns: 1fr; }
+  .catalog-guide-heading, .quote-list-heading { align-items: flex-start; }
+  .catalog-guide-done { align-items: flex-start; }
   .brand-catalog-grid {
     grid-template-columns: 1fr;
   }

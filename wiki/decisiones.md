@@ -28,6 +28,12 @@ fuentes: [../AGENTS.md, ../landing/package.json, ../landing/src/components/Testi
 - **Decisión de interfaz:** poner esos seis tonos primero y dejar la paleta adicional desplegable; los HEX siguen siendo aproximaciones orientativas.
 - Fuente: [[referencias-de-colores-automotrices]].
 
+## 2026-11-19 — Tres ayudas ligeras para el catálogo y los colores
+- **Confirmado por el propietario (respuesta “1-2-3”):** implementar cotización de varios productos en un solo mensaje de WhatsApp, guía breve de exploración del catálogo y consulta de color con código opcional.
+- **Decisión de alcance:** sin pagos, cuentas, guardar la lista, almacenar códigos/fotos ni automatizar el envío. Disponibilidad, precio, presentación y recomendación técnica los confirma el asesor. La foto, si la persona desea adjuntarla, se agrega desde WhatsApp.
+- **Implementación local:** `landing/src/components/sections/BrandCatalog.tsx`, `landing/src/components/simulator/ColorSimulator.tsx`, `landing/src/lib/whatsapp.ts` y `landing/src/styles/index.css`.
+- **Verificación pendiente:** build, revisión visual y pruebas funcionales condicionadas a que `vite` y `tsc` locales vuelvan a estar disponibles.
+
 - **Confirmado, 2026-11-06:** conservar React/TypeScript/Vite y la organización presente; no reconstruir la landing. Fuente: `package.json`, estructura `landing/src/`.
 - **Confirmado, 2026-11-06:** mantener `Docs/` como entrada de originales; no mover ni duplicar fuentes sin motivo. Fuente: instrucciones del propietario y `AGENTS.md`.
 - **Confirmado, 2026-11-06:** no publicar ni subir a remoto sin autorización específica del destino. Fuente: instrucciones del propietario y `AGENTS.md`.
