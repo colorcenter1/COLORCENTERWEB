@@ -102,3 +102,4 @@ fuentes: [../AGENTS.md, ../landing/package.json, ../landing/src/data/mockData.ts
 - Se inventariaron visualmente los 14 gráficos actuales de `Docs/`. El cartel se usó como referencia de paleta; `Docs/disolvente/s.w.jpg` se copió a `landing/public/products/productos-de-pintura.jpg` y se muestra en la categoría destacada. Mockups de camisetas/tazas no se publicaron.
 - Se actualizó el catálogo de fuentes, la estructura y el estado del paso 3; paso 0 queda completado porque están las cinco skills instaladas. La vigencia/autorización de la foto y un logo limpio/fotos propias siguen pendientes.
 - No se incorporó `Docs/` a Git. Build, lint y vista previa tras el cambio pendientes; no se publicó ni se subió trabajo nuevo al remoto.
+- Los cambios de página e inventario se guardaron localmente en el commit `7d1c4b9` («Actualiza landing con activos de Docs»). La rama quedó un commit delante de GitHub; no se hizo push.
