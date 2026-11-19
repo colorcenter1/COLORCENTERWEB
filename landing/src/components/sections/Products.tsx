@@ -48,6 +48,22 @@ function CategoryTile({ category, isFeatured }: CategoryTileProps) {
         </div>
       </header>
 
+      {isFeatured && (
+        <figure className="product-feature-photo">
+          <img
+            src="/products/productos-de-pintura.jpg"
+            alt="Envases de productos para pintura automotriz"
+            width="901"
+            height="857"
+            loading="lazy"
+            decoding="async"
+          />
+          <figcaption>
+            Imagen de producto recibida. Confirma por WhatsApp la presentación y disponibilidad actuales.
+          </figcaption>
+        </figure>
+      )}
+
       <ul className="product-items">
         {category.products.map((product) => (
           <li key={product.id}>

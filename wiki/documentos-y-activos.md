@@ -2,18 +2,23 @@
 tipo: catálogo-de-fuentes
 estado: vigente
 creado: 2026-11-06
-actualizado: 2026-11-10
+actualizado: 2026-11-19
 tags: [fuentes, activos, docs]
 fuentes: [../AGENTS.md, ../landing/src/data/mockData.ts, ../landing/index.html]
 ---
 # Documentos y activos
 
-`Docs/` es la ubicación de originales empresariales. La revisión recursiva del 2026-11-10 encontró `Docs/Logo.jpg`; se puede depositar allí información empresarial, fotos, catálogos y referencias. Los originales se conservan intactos.
+`Docs/` es la ubicación de originales empresariales. En la revisión del 2026-11-19 se encontraron 14 archivos gráficos. Los originales se conservan intactos y están excluidos de Git. Se puede seguir depositando allí información, fotos, catálogos y referencias.
 
 ## Originales de empresa
 | Ruta | Categoría | Descripción / información | Fecha o versión | Uso posible | Pendiente |
 |---|---|---|---|---|---|
-| `Docs/Logo.jpg` | Identidad visual | JPEG 150 × 150 inspeccionado: emblema cian y automóvil blanco/amarillo sobre azul; procedencia: archivo añadido por el propietario a Docs, autoría/licencia sin confirmar | Detectado 2026-11-10; sin versión declarada | Referencia empresarial; original intacto, no copiado a la web | Confirmar aprobación y aportar versión de mayor resolución si se reemplaza el logo actual |
+| `Docs/Logo.jpg` | Identidad visual | JPEG 150 × 150 inspeccionado en la revisión histórica; no está presente en la carpeta actual. Se conserva el registro de procedencia anterior | Detectado 2026-11-10; ausente en el inventario 2026-11-19 | Referencia histórica; no copiado a la web | Si se requiere, volver a colocar el original; no reemplazar el logo actual automáticamente |
+| `Docs/logo/CARTEL-COLORCENTER.jpg` | Identidad visual / referencia de color | Cartel panorámico con logo Color Center y marcas de proveedores. Inspección visual: azul marino, blanco, amarillo y azules vivos. No es un logo limpio para encabezado | Añadido a Docs; sin versión declarada | Referencia de paleta; colores muestreados `#001250`, `#FFFFFF`, `#FFFF01`, `#0057A7`, `#0051E0`, `#FEC909`; dos acentos CSS se aproximaron a `#001250` y `#FEC909` | Confirmar paleta oficial y autorización de logos de proveedores antes de publicarlos |
+| `Docs/disolvente/s.w.jpg` | Foto de producto | Imagen inspeccionada de tres envases de productos para pintura automotriz sobre fondo claro (901 × 857) | Añadido a Docs; sin fecha/version declarada | Copia seleccionada en `landing/public/products/productos-de-pintura.jpg`; usada en la categoría destacada del catálogo | Confirmar que los envases/productos siguen vigentes y que la foto puede mostrarse públicamente; precio/disponibilidad se consultan por WhatsApp |
+| `Docs/disolvente/thinner_sherwin_williams_454_para_poliester_poliuretano_5l_1169_1_59665465c92574ab9f9539aaf14f997a.webp` | Foto de producto | Imagen inspeccionada de un envase de thinner 454; nombre de archivo menciona marca y capacidad, no se toma como confirmación comercial | Añadido a Docs; metadatos de archivo muestran 2025-06-17 | Referencia visual alternativa, no publicada | Confirmar vigencia, marca, capacidad, autorización y uso antes de agregar al catálogo |
+| `Docs/mokap/351.jpg`, `Docs/mokap/dsfsf.jpg`, `Docs/mokap/fffff.jpg` | Identidad / mockups | Tres montajes visuales de tazas con variantes del logo ColorCenter; inspeccionados visualmente | Añadidos a Docs; sin versión declarada | No publicados; no se consideran fotos de productos automotrices | Confirmar si representan merchandising real y si se desea mostrarlo |
+| `Docs/mokap/57893.jpg`, `Docs/mokap/57893.png`, `Docs/mokap/dg.jpg`, `Docs/mokap/dg.png`, `Docs/mokap/gdf.jpg`, `Docs/mokap/gdf.png`, `Docs/mokap/sddfgvdf.jpg`, `Docs/mokap/sddfgvdf.png` | Identidad / mockups | Ocho montajes visuales de camisetas negras con variantes del logo ColorCenter; inspeccionados visualmente | Añadidos a Docs; sin versión declarada | No publicados; no se consideran fotos de equipo o instalaciones | Confirmar si representan merchandising real y si se desea mostrarlo |
 
 ## Fuentes del proyecto y activos existentes
 | Ruta | Categoría | Descripción / información | Fecha o versión | Uso posible | Pendiente |
@@ -32,7 +37,7 @@ fuentes: [../AGENTS.md, ../landing/src/data/mockData.ts, ../landing/index.html]
 | `.agents/skills/seo-organico-ia/scripts/inspeccionar_html.py` | Script de apoyo | Inspección estática local de metadatos HTML y archivos sitemap/robots; no hace red ni escribe | Copiado del ZIP 2026-11-10; contenido revisado | Paso 10 SEO si se solicita | No ejecutado; no acredita indexación ni vista DOM renderizada |
 | `PLAN DE MEJORA/06-color-center-valledupar/entrega-color-center.zip` | Paquete fuente | Archivo original que contiene plan, guía y los dos ZIP de skills. No se extrajo ni modificó | Recibido 2026-11-10 | Procedencia del material del plan | Conservar intacto |
 
-No se encontró carpeta `fuentes/` ni ZIP original de Google AI Studio en la raíz. Los ZIP y la guía de instalación antes registrados ya no están en su ruta anterior: la revisión actual solo encuentra `plan-carrito.md` y `plan-mejoras.md` allí. Las filas anteriores conservan su procedencia histórica; ubicación actual de ZIP/guía pendiente. No se copiaron gráficos a `landing/public/` ni originales a `Docs/organizados/`; las únicas copias nuevas están en `.agents/skills/`, vinculadas arriba a sus ZIP de origen.
+No se encontró carpeta `fuentes/` ni ZIP original de Google AI Studio en la raíz. En la revisión actual, los documentos del plan y los ZIP de skills están presentes en `PLAN DE MEJORA/06-color-center-valledupar/`; algunas filas históricas describen su ubicación anterior. No se copiaron originales a `Docs/organizados/`. La única copia técnica nueva es la foto seleccionada indicada arriba; mantiene trazabilidad a su original.
 
 ## Revisión de reorganización, 2026-11-10
 - Todas las rutas de código y activos web pasan a landing/; los originales empresariales siguen en Docs/.

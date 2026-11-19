@@ -2,7 +2,7 @@
 tipo: índice
 estado: vigente
 creado: 2026-11-06
-actualizado: 2026-11-10
+actualizado: 2026-11-19
 tags: [wiki, landing]
 fuentes: [../AGENTS.md]
 ---
@@ -15,6 +15,7 @@ fuentes: [../AGENTS.md]
 
 ## Fuentes y decisiones
 - [[documentos-y-activos]] — inventario de `Docs/` y fuentes disponibles.
+- [[inventario-de-datos-web]] — revisión técnica de los datos que trata la landing.
 - [[decisiones]] — decisiones confirmadas y su procedencia.
 - [[pendientes]] — dudas y tareas para continuar.
 - [[log]] — historial cronológico de mantenimiento.

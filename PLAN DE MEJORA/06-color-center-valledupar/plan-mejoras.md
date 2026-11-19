@@ -14,9 +14,9 @@ Guarda este archivo en la carpeta de tu página, junto al código. Pídele a tu 
 
 ## Antes de empezar
 
-- [ ] **Paso 0 · Instalar skills.** Sigue `instalar-skills.md`. *(Nivel de modelo: medio)*
+- [x] **Paso 0 · Instalar skills.** Sigue `instalar-skills.md`. *(Nivel de modelo: medio)*
 
-  **Avance 2026-11-10:** se instalaron las dos skills entregadas en ZIP (`seo-organico-ia` y `tratamiento-datos-landing`) en `.agents/skills/`. Faltan las tres skills de diseño indicadas desde repositorios externos; el paso 0 sigue pendiente y no se marca como completado.
+  **Avance 2026-11-19:** las cinco carpetas de skills mencionadas están presentes en `.agents/skills/` (`seo-organico-ia`, `tratamiento-datos-landing`, `emil-design-eng`, `mobile-native`, `impeccable`). Se marca instalación completada; no implica que todas se hayan ejecutado.
 
 ---
 
@@ -29,20 +29,20 @@ Guarda este archivo en la carpeta de tu página, junto al código. Pídele a tu 
   **Revisión 2026-11-10:** hay código React/TypeScript/Vite extraído con portada, catálogo y secciones; no se encontró el ZIP original de AI Studio. Node v26.13.0 y `npm.cmd` 11.20.0 están disponibles, pero no hay `node_modules` ni archivo de bloqueo; falta instalar dependencias para abrir la vista previa. La estructura está resumida en la wiki.
   **Si no hay prototipo ni código:** avísale a tu facilitador antes de seguir.
 
-- [ ] **Paso 2 · Revisar la estructura contigo** *(Nivel de modelo: medio)*
+- [x] **Paso 2 · Revisar la estructura contigo** *(Nivel de modelo: medio)*
 
   > Lee `plan-mejoras.md` y haz solo el paso 2. Muéstrame en una lista las secciones de la página en orden, con una línea de qué tiene cada una. Señala las fotos, videos o textos de muestra que haya. Propón qué quitar, qué juntar y dónde vale la pena poner fotos o videos propios. No cambies nada hasta que yo apruebe la estructura.
 
   **Quedó bien si:** apruebas una estructura clara antes de seguir.
 
-  **Revisión 2026-11-10:** inventario y propuesta guardados en `wiki/estructura-de-la-landing.md`; no se cambió la página. Este paso sigue pendiente hasta que el propietario apruebe o ajuste el orden sugerido.
+  **Revisión 2026-11-10:** propuesta aprobada por el propietario y estructura aplicada en el rediseño actual; ver `wiki/estructura-de-la-landing.md`.
 
 - [ ] **Paso 3 · Marca y portada** *(Nivel de modelo: medio)*
 
   > Lee `plan-mejoras.md` y haz solo el paso 3. Pon el logo y los colores de Color Center de `Docs` en toda la página. Cambia la portada y las imágenes de muestra por fotos y videos propios del negocio. Usa solo el material autorizado. Si hay video, que no suene solo, se pueda pausar y no impida navegar.
 
   **Necesitas en Docs:** logo, colores y fotos o videos propios.
-  **Estado:** el propietario espera subir material gráfico dentro de las próximas 72 horas desde 2026-11-10. Inventariar y revisar cada archivo antes de usarlo.
+  **Avance 2026-11-19:** cartel y 14 gráficos recibidos e inspeccionados. Paleta tomada como referencia y una imagen de envases aplicada a la categoría destacada. Camisetas y tazas son mockups y no se publicaron. Falta confirmar vigencia/autorización de la foto, obtener un logo limpio autorizado y fotos propias de portada, equipo o instalaciones; por eso este paso sigue abierto.
   **Quedó bien si:** reconoces tu negocio y no queda ninguna imagen ajena.
 
 - [ ] **Paso 4 · Pinturas: automotriz y general** *(Nivel de modelo: alto)*

@@ -96,3 +96,9 @@ fuentes: [../AGENTS.md, ../landing/package.json, ../landing/src/data/mockData.ts
 ## [2026-11-11] repositorio | Push a GitHub
 - Por indicación del propietario se subieron a `origin/main` (github.com/colorcenter1/COLORCENTERWEB) los commits del rediseño, de `4685827` a `9c01d72`. Antes se verificó que no hubiera secretos, dependencias ni compilados versionados; `Docs/` y la etiqueta local `antes-del-rediseno` no se subieron.
 - Siguiente paso: esperar la validación del cliente sobre https://color-center-landing.vercel.app y continuar con sus comentarios.
+
+## [2026-11-19] sincronización y activos | Actualización local desde GitHub
+- `main` se adelantó en fast-forward hasta `5bb926b`, ocho commits remotos; la copia local previa quedó respaldada en `stash@{0}` y se reaplicaron/conciliaron los cambios de trabajo sin eliminar los archivos originales de Docs. No se hizo push.
+- Se inventariaron visualmente los 14 gráficos actuales de `Docs/`. El cartel se usó como referencia de paleta; `Docs/disolvente/s.w.jpg` se copió a `landing/public/products/productos-de-pintura.jpg` y se muestra en la categoría destacada. Mockups de camisetas/tazas no se publicaron.
+- Se actualizó el catálogo de fuentes, la estructura y el estado del paso 3; paso 0 queda completado porque están las cinco skills instaladas. La vigencia/autorización de la foto y un logo limpio/fotos propias siguen pendientes.
+- No se incorporó `Docs/` a Git. Build, lint y vista previa tras el cambio pendientes; no se publicó ni se subió trabajo nuevo al remoto.
