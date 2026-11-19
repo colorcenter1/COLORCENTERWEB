@@ -8,6 +8,23 @@ fuentes: [../AGENTS.md, ../landing/package.json, ../landing/src/components/Testi
 ---
 # Decisiones
 
+## 2026-11-19 — Catálogo de marcas, fuentes y alcance
+- **Confirmado por fuente:** iniciar con catálogos informativos Sherwin-Williams y baslac y enlazar cada categoría a su fuente oficial. Las fuentes son Brasil y EMEA respectivamente; no equivalen a inventario confirmado de Valledupar.
+- **Decisión de implementación:** solo se reutiliza una foto de proceso de Pexels con licencia gratuita declarada, con crédito, y se identifica como ilustrativa. No se usan fotos de packshots de fabricante sin licencia clara.
+- **Pendiente del propietario:** precisar el nombre “Autolac” entre la línea AUTOLAC de Pinturas Everest y la empresa colombiana Industrias Autolack S.A.S.
+- Fuente y estado: [[catalogo-por-marcas]], `landing/src/data/brandCatalogs.ts`, páginas oficiales enlazadas en esa página.
+
+## 2026-11-19 — Auto conceptual 3D en simulador
+- **Confirmado por el propietario:** opción 1, modelo 3D genérico realista sin marca.
+- **Implementado localmente:** modelo Car Concept del repositorio Khronos glTF Sample Assets bajo CC BY 4.0; se ocultan placa/emblema del volante identificados en nodos, se recolorean materiales de carrocería y se conservan giro y color en una descarga diferida al abrir el simulador.
+- **Límite:** 11.8 MB de GLB descargados al activar el 3D; faltan revisión en navegador, medición de móvil y comprobación de que no quedan marcas/emblemas visibles en la geometría.
+- Fuente y licencia: `landing/public/models/CREDITOS.md`; [[estado-del-proyecto]].
+
+## 2026-11-19 — Paleta rápida basada en reparaciones
+- **Confirmado por fuente:** seis tonos y proporciones publicados por CESVI para 2023; representan frecuencia en reparaciones, no demanda nacional de ventas.
+- **Decisión de interfaz:** poner esos seis tonos primero y dejar la paleta adicional desplegable; los HEX siguen siendo aproximaciones orientativas.
+- Fuente: [[referencias-de-colores-automotrices]].
+
 - **Confirmado, 2026-11-06:** conservar React/TypeScript/Vite y la organización presente; no reconstruir la landing. Fuente: `package.json`, estructura `landing/src/`.
 - **Confirmado, 2026-11-06:** mantener `Docs/` como entrada de originales; no mover ni duplicar fuentes sin motivo. Fuente: instrucciones del propietario y `AGENTS.md`.
 - **Confirmado, 2026-11-06:** no publicar ni subir a remoto sin autorización específica del destino. Fuente: instrucciones del propietario y `AGENTS.md`.

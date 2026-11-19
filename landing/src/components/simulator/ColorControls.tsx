@@ -1,5 +1,5 @@
 import { useId, useState, type CSSProperties, type FormEvent } from 'react';
-import { PALETTE } from '../../data/palette';
+import { PALETTE, findTone } from '../../data/palette';
 import { normalizeHex } from '../../lib/color';
 import { BODY_MODELS, type BodyId } from './models';
 
@@ -38,36 +38,86 @@ interface PalettePickerProps {
 }
 
 export function PalettePicker({ selectedToneId, onSelect }: PalettePickerProps) {
+  const popular = [
+    { id: 'gris-raton', share: '29,6%' },
+    { id: 'blanco-puro', share: '23,8%' },
+    { id: 'plata-aluminio', share: '19,3%' },
+    { id: 'rojo-vivo', share: '10,0%' },
+    { id: 'negro-intenso', share: '7,2%' },
+    { id: 'azul-oscuro', share: '5,2%' },
+  ] as const;
+  const popularIds = new Set<string>(popular.map(({ id }) => id));
+  const otherFamilies = PALETTE.map((family) => ({
+    ...family,
+    tones: family.tones.filter((tone) => !popularIds.has(tone.id)),
+  })).filter((family) => family.tones.length > 0);
+
   return (
     <fieldset className="control-group">
-      <legend>Paleta orientativa · 20 tonos</legend>
-      <div className="swatch-grid">
-      {PALETTE.map((family) => (
-        <div key={family.id} className="swatch-family" role="group" aria-label={family.name}>
-          <p className="swatch-family-name" aria-hidden="true">
-            {family.name}
-          </p>
-          <div className="swatches">
-            {family.tones.map((tone) => {
-              const style: SwatchStyle = { '--sw': tone.hex };
-              return (
-                <label key={tone.id} className="swatch" title={tone.name}>
-                  <input
-                    type="radio"
-                    name="tono"
-                    value={tone.id}
-                    aria-label={tone.name}
-                    checked={selectedToneId === tone.id}
-                    onChange={() => onSelect(tone.id)}
-                  />
-                  <span style={style} aria-hidden="true" />
-                </label>
-              );
-            })}
-          </div>
-        </div>
-      ))}
+      <legend>Elige un color con un toque</legend>
+      <p className="palette-source-note">
+        Tonos frecuentes en reparaciones en Colombia según CESVI (2023); no representan códigos de fábrica.
+      </p>
+      <div className="popular-swatches" aria-label="Colores frecuentes en Colombia">
+        {popular.map(({ id, share }) => {
+          const tone = findTone(id);
+          if (!tone) return null;
+          const style: SwatchStyle = { '--sw': tone.hex };
+          return (
+            <button
+              key={tone.id}
+              type="button"
+              className="popular-swatch"
+              aria-pressed={selectedToneId === tone.id}
+              aria-label={`${tone.name}, ${share} de los casos analizados`}
+              onClick={() => onSelect(tone.id)}
+            >
+              <span className="popular-swatch-color" style={style} aria-hidden="true" />
+              <span className="popular-swatch-name">{tone.name}</span>
+              <span className="popular-swatch-share">{share}</span>
+            </button>
+          );
+        })}
       </div>
+      <p className="palette-source-link">
+        <a
+          href="https://www.cesvicolombia.com/actualizacion-de-costos-de-materiales-2023-en-el-baremo-de-pintura-de-cesvi-colombia/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Fuente: CESVI Colombia, 2023
+        </a>
+      </p>
+      <details className="more-colors">
+        <summary>Ver los otros tonos de la paleta</summary>
+        <div className="swatch-grid">
+        {otherFamilies.map((family) => (
+          <div key={family.id} className="swatch-family" role="group" aria-label={family.name}>
+            <p className="swatch-family-name" aria-hidden="true">
+              {family.name}
+            </p>
+            <div className="swatches">
+              {family.tones.map((tone) => {
+                const style: SwatchStyle = { '--sw': tone.hex };
+                return (
+                  <label key={tone.id} className="swatch" title={tone.name}>
+                    <input
+                      type="radio"
+                      name="tono"
+                      value={tone.id}
+                      aria-label={tone.name}
+                      checked={selectedToneId === tone.id}
+                      onChange={() => onSelect(tone.id)}
+                    />
+                    <span style={style} aria-hidden="true" />
+                  </label>
+                );
+              })}
+            </div>
+          </div>
+        ))}
+        </div>
+      </details>
     </fieldset>
   );
 }

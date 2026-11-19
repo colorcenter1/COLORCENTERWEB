@@ -108,3 +108,9 @@ fuentes: [../AGENTS.md, ../landing/package.json, ../landing/src/data/mockData.ts
 ## [2026-11-19] contacto | WhatsApp oficial confirmado
 - El propietario confirmó `+57 300 442 6477` como número oficial. `landing/src/data/business.ts` y el helper ya usan ese número; las consultas preparan mensajes generales, por producto y por color.
 - Se actualizó empresa, decisiones, pendientes, plan de mejoras y AGENTS. Paso 5 queda parcialmente verificado por inspección estática; sigue pendiente la prueba interactiva móvil porque no se pudo abrir la vista local. No se envió mensaje.
+
+## [2026-11-19] catálogo y simulador | Catálogos oficiales y modelo 3D genérico
+- El propietario eligió la opción 1: modelo 3D genérico sin marca. Se integró el auto conceptual glTF de Khronos, con licencia CC BY 4.0 y crédito visible; la paleta ahora muestra primero seis tonos de frecuencia CESVI Colombia 2023 para reparaciones, con su alcance explicado.
+- Se añadieron catálogos interactivos de Sherwin-Williams (fuente regional Brasil) y baslac (EMEA), con categorías de pintura, barniz, masilla, primer, lijas/abrasivos y disolventes; cada sección lleva a su fuente oficial y permite consulta por WhatsApp. No se afirma disponibilidad local. Autolac sigue pendiente de aclarar entre Pinturas Everest (línea AUTOLAC) e Industrias Autolack S.A.S. de Colombia.
+- La fotografía ilustrativa de proceso de Gustavo Fring se incorporó desde Pexels con crédito; se revisó visualmente. Se descartó otra foto gratuita al detectar marcas ajenas en envase/auto. No se muestran envases de marca sin permiso.
+- `git diff --check` no informó problemas. `npm.cmd run lint` y `npm.cmd run build` no arrancaron porque faltan `tsc` y `vite` en `landing/node_modules`; no se reinstalaron dependencias. Por ello quedan pendientes build, revisión visual/funcional en escritorio/móvil y publicación.

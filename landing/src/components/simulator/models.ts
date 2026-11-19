@@ -1,12 +1,7 @@
 /**
- * Carrocerías del simulador. Este archivo no importa Three.js, para que la página
- * pueda listar las opciones sin descargar la biblioteca 3D.
- *
- * Los vehículos son modelos propios generados por código (carSpecs.ts y carFactory.ts),
- * creados a solicitud del propietario el 2026-11-10: sin marcas, sin licencias de terceros
- * y sin archivos de modelo que descargar.
+ * Identificación del vehículo de muestra, genérico y sin marca.
  */
-export type BodyId = 'sedan' | 'hatchback' | 'pickup';
+export type BodyId = 'sample';
 
 export interface BodyModel {
   id: BodyId;
@@ -16,12 +11,10 @@ export interface BodyModel {
 }
 
 export const BODY_MODELS: readonly BodyModel[] = [
-  { id: 'sedan', label: 'Sedán', initialYawDeg: -35 },
-  { id: 'hatchback', label: 'Hatchback', initialYawDeg: -35 },
-  { id: 'pickup', label: 'Pickup', initialYawDeg: -35 },
+  { id: 'sample', label: 'Auto de muestra (modelo conceptual sin marca)', initialYawDeg: -35 },
 ];
 
-export const DEFAULT_BODY: BodyId = 'sedan';
+export const DEFAULT_BODY: BodyId = 'sample';
 
 export function findBody(id: BodyId): BodyModel {
   const found = BODY_MODELS.find((body) => body.id === id);

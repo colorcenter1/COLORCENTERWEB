@@ -11,7 +11,6 @@ import {
   Box3,
   CanvasTexture,
   Color,
-  DoubleSide,
   Group,
   Mesh,
   MeshBasicMaterial,
@@ -24,14 +23,15 @@ import {
   SRGBColorSpace,
   Vector3,
   WebGLRenderer,
+  type Texture,
   type Material,
   type Object3D,
 } from 'three';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
 import { RoomEnvironment } from 'three/examples/jsm/environments/RoomEnvironment.js';
+import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
 import type { SimulatedFinish } from '../../data/palette';
 import type { BodyModel } from './models';
-import { buildCar, type CarMaterials } from './carFactory';
 
 export interface PaintSpec {
   hex: string;
@@ -83,39 +83,19 @@ function centerOnGround(root: Object3D): Vector3 {
   return box.getSize(new Vector3());
 }
 
-function createCarMaterials(paint: Material): CarMaterials {
-  return {
-    paint,
-    glass: new MeshPhysicalMaterial({ color: '#070a0f', metalness: 0.2, roughness: 0.08, clearcoat: 1, envMapIntensity: 0.55 }),
-    trim: new MeshStandardMaterial({ color: '#16181c', roughness: 0.62, metalness: 0.1 }),
-    well: new MeshStandardMaterial({ color: '#0b0c0e', roughness: 0.95, metalness: 0, side: DoubleSide }),
-    chrome: new MeshStandardMaterial({ color: '#dfe3e8', roughness: 0.16, metalness: 1 }),
-    rubber: new MeshStandardMaterial({ color: '#121314', roughness: 0.9, metalness: 0 }),
-    rimDark: new MeshStandardMaterial({ color: '#2c3036', roughness: 0.4, metalness: 0.8 }),
-    rim: new MeshStandardMaterial({ color: '#c9ced4', roughness: 0.22, metalness: 1 }),
-    headlight: new MeshPhysicalMaterial({
-      color: '#eef3fa',
-      emissive: new Color('#dbe6ff'),
-      emissiveIntensity: 0.45,
-      roughness: 0.05,
-      clearcoat: 1,
-    }),
-    taillight: new MeshPhysicalMaterial({
-      color: '#6e0b12',
-      emissive: new Color('#c4121d'),
-      emissiveIntensity: 0.4,
-      roughness: 0.1,
-      clearcoat: 1,
-    }),
-  };
-}
-
-function disposeObject(root: Object3D, keep: ReadonlySet<Material>): void {
+function disposeObject(root: Object3D): void {
   root.traverse((child) => {
     if (!(child instanceof Mesh)) return;
     child.geometry.dispose();
     const materials: Material[] = Array.isArray(child.material) ? child.material : [child.material];
-    materials.filter((m) => !keep.has(m)).forEach((m) => m.dispose());
+    materials.forEach((material) => {
+      const maps: Texture[] = [];
+      for (const value of Object.values(material)) {
+        if (value && typeof value === 'object' && 'isTexture' in value && value.isTexture) maps.push(value as Texture);
+      }
+      maps.forEach((map) => map.dispose());
+      material.dispose();
+    });
   });
 }
 
@@ -152,15 +132,16 @@ export function createSimulatorScene(container: HTMLElement, onContextLost: () =
   controls.maxPolarAngle = Math.PI * 0.49;
   controls.target.set(0, 0.65, 0);
 
-  const paintMaterial = new MeshPhysicalMaterial({ name: 'cc-paint' });
-  const carMaterials = createCarMaterials(paintMaterial);
-  const sharedMaterials: ReadonlySet<Material> = new Set(Object.values(carMaterials));
+  const loader = new GLTFLoader();
+  const paintMaterials: Material[] = [];
   const shadow = createContactShadow();
   const stageGroup = new Group();
   stageGroup.add(shadow);
   scene.add(stageGroup);
 
   let current: Object3D | null = null;
+  let loadPromise: Promise<Object3D> | null = null;
+  let activePaint: PaintSpec = { hex: '#6d747a', finish: 'metalizado' };
   let frame = 0;
   let isDisposed = false;
 
@@ -192,25 +173,61 @@ export function createSimulatorScene(container: HTMLElement, onContextLost: () =
 
   async function showBody(model: BodyModel): Promise<void> {
     if (isDisposed) return;
-    const root = buildCar(model.id, carMaterials);
-    const size = centerOnGround(root);
-    shadow.scale.set(size.x * 1.3, size.z * 1.35, 1);
+    loadPromise ??= loader.loadAsync('/models/khronos-car-concept.glb').then(({ scene: root }) => {
+      root.traverse((child) => {
+        const nodeName = child.name.toLowerCase();
+        if (nodeName.includes('license plate') || nodeName.includes('steeringemblem')) child.visible = false;
+        if (!(child instanceof Mesh)) return;
+        const materials: Material[] = Array.isArray(child.material) ? child.material : [child.material];
+        for (const material of materials) {
+          if (/^paint\s/i.test(material.name)) {
+            if (material instanceof MeshPhysicalMaterial) {
+              material.metalness = 0.45;
+              material.roughness = 0.3;
+              material.clearcoat = 1;
+              material.clearcoatRoughness = 0.04;
+            }
+            paintMaterials.push(material);
+          }
+        }
+      });
+      applyPaint(activePaint);
+      return root;
+    });
+    const root = await loadPromise;
+    if (isDisposed) return;
+    centerOnGround(root);
     shadow.position.set(0, 0.002, 0);
 
     if (current) {
       stageGroup.remove(current);
-      disposeObject(current, sharedMaterials);
     }
     current = root;
     stageGroup.rotation.y = (model.initialYawDeg * Math.PI) / 180;
-    stageGroup.add(root);
+    if (root.parent !== stageGroup) stageGroup.add(root);
+    const bounds = new Box3().setFromObject(root);
+    const fittedSize = bounds.getSize(new Vector3());
+    const scale = 4.8 / Math.max(fittedSize.x, fittedSize.y, fittedSize.z);
+    root.scale.setScalar(scale);
+    centerOnGround(root);
+    shadow.scale.set(fittedSize.x * scale * 1.3, fittedSize.z * scale * 1.35, 1);
+    camera.position.set(0, 1.6, 8.2);
+    controls.target.set(0, 0.72, 0);
+    controls.update();
     requestRender();
   }
 
   function setPaint({ hex, finish }: PaintSpec): void {
-    paintMaterial.color.set(hex);
-    paintMaterial.setValues(FINISH_PARAMS[finish]);
-    paintMaterial.needsUpdate = true;
+    activePaint = { hex, finish };
+    applyPaint(activePaint);
+  }
+
+  function applyPaint({ hex, finish }: PaintSpec): void {
+    for (const material of paintMaterials) {
+      if ((material instanceof MeshStandardMaterial || material instanceof MeshPhysicalMaterial) && material.color instanceof Color) material.color.set(hex);
+      if (material instanceof MeshPhysicalMaterial) material.setValues(FINISH_PARAMS[finish]);
+      material.needsUpdate = true;
+    }
     requestRender();
   }
 
@@ -224,8 +241,7 @@ export function createSimulatorScene(container: HTMLElement, onContextLost: () =
     if (frame) cancelAnimationFrame(frame);
     observer.disconnect();
     controls.dispose();
-    if (current) disposeObject(current, sharedMaterials);
-    sharedMaterials.forEach((material) => material.dispose());
+    if (current) disposeObject(current);
     shadow.geometry.dispose();
     (shadow.material as MeshBasicMaterial).map?.dispose();
     (shadow.material as MeshBasicMaterial).dispose();

@@ -39,6 +39,19 @@ fuentes: [../AGENTS.md, ../landing/src/data/mockData.ts, ../landing/index.html]
 
 No se encontró carpeta `fuentes/` ni ZIP original de Google AI Studio en la raíz. En la revisión actual, los documentos del plan y los ZIP de skills están presentes en `PLAN DE MEJORA/06-color-center-valledupar/`; algunas filas históricas describen su ubicación anterior. No se copiaron originales a `Docs/organizados/`. La única copia técnica nueva es la foto seleccionada indicada arriba; mantiene trazabilidad a su original.
 
+## Fuentes de marca y activos añadidos (2026-11-19)
+| Ruta | Categoría | Descripción / información | Fecha o versión | Uso | Pendiente |
+|---|---|---|---|---|---|
+| `landing/src/data/brandCatalogs.ts` | Catálogo | Listas de categorías y referencias resumidas de las páginas oficiales; identifica alcance Brasil/EMEA y líneas no encontradas | Consultadas 2026-11-19 | Catálogo interactivo por marca; WhatsApp consulta disponibilidad/precio | Confirmar que las referencias/regiones aplican en Valledupar; tercer nombre Autolac por aclarar |
+| `https://sherwin-auto.com.br/en/produtos/` | Fuente oficial externa | Catálogo Sherwin-Williams Automotive Finishes de Brasil: pinturas, barnices, masillas, primers, diluentes/auxiliares y abrasivos | Consultada 2026-11-19 | Categorías de Sherwin-Williams en web | No prueba distribución ni stock local |
+| `https://www.baslac.com/en-emea/products-systems` y páginas enlazadas de productos/fichas técnicas | Fuente oficial externa | Portafolio baslac en región EMEA; lista bases/topcoats, barnices, primers, masilla, reductores en ficha técnica; no se identificó abrasivo | Consultada 2026-11-19 | Categorías y ejemplos baslac | Región e inventario de Colombia pendientes |
+| `https://pinturaseverest.com/categoria-producto/linea-principal/linea-automotriz/` | Fuente oficial externa | Línea AUTOLAC asociada a Pinturas Everest; fabricante/región distintos de la colombiana Autolack | Consultada 2026-11-19 | Diferenciar homónimos | Confirmación del propietario |
+| `https://autolack.com.co/` | Fuente oficial externa | Industrias Autolack S.A.S. Colombia; nombre con “k”, identidad distinta | Consultada 2026-11-19 | Desambiguación | Confirmación del propietario |
+| `landing/public/catalog/proceso-pintura-ilustrativo.jpg` | Imagen de catálogo | Foto de proceso de aplicación de pintura de Gustavo Fring, descargada de Pexels; revisada visualmente; no es un producto/marca Color Center | Consulta 2026-11-19 | Ilustración de proceso en catálogo por marca | Crédito y licencia registrados en `landing/public/catalog/CREDITOS.md` |
+| `landing/public/models/khronos-car-concept.glb` | Modelo 3D | Auto conceptual genérico, sin marca, glTF oficial Khronos; tamaño 11.78 MB, CC BY 4.0. Créditos en `landing/public/models/CREDITOS.md`; placas/emblema de volante se ocultan por código | Descargado 2026-11-19 | Simulador de tonos con pintura clicable | Revisar visualmente en navegador antes de publicar; considerar peso en conexión móvil |
+
+**Pendiente de lectura:** no se encontró una foto libre, neutra y de envases exactos de las marcas con autorización explícita. Las fotos de proceso no se presentan como referencias de producto. No se ha reutilizado la foto Unsplash de una lata sobre carro: tras inspeccionarla localmente se observó marca de café y emblema de automóvil, por lo que se descartó.
+
 ## Revisión de reorganización, 2026-11-10
 - Todas las rutas de código y activos web pasan a landing/; los originales empresariales siguen en Docs/.
 - La imagen externa de Masillas Poliéster (photo-1486006920555-c77dce18193b, Unsplash) responde HTTP 404. Pendiente de sustituto autorizado; no se cambió el catálogo.

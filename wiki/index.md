@@ -15,6 +15,8 @@ fuentes: [../AGENTS.md]
 
 ## Fuentes y decisiones
 - [[documentos-y-activos]] — inventario de `Docs/` y fuentes disponibles.
+- [[catalogo-por-marcas]] — productos de Sherwin-Williams y baslac verificados en fuentes oficiales; Autolac pendiente de identificar.
+- [[referencias-de-colores-automotrices]] — paleta por frecuencia de reparación de CESVI y límites de interpretación.
 - [[inventario-de-datos-web]] — revisión técnica de los datos que trata la landing.
 - [[decisiones]] — decisiones confirmadas y su procedencia.
 - [[pendientes]] — dudas y tareas para continuar.

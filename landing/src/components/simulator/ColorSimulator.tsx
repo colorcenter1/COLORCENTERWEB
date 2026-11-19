@@ -2,9 +2,9 @@ import { lazy, Suspense, useEffect, useMemo, useRef, useState, type CSSPropertie
 import { Box, MessageCircle } from 'lucide-react';
 import { COLOR_DISCLAIMER, DEFAULT_TONE_ID, FINISH_LABEL, findTone, type SimulatedFinish } from '../../data/palette';
 import { colorInquiry, whatsappUrl } from '../../lib/whatsapp';
-import { BodySelector, CustomColor, PalettePicker } from './ColorControls';
+import { CustomColor, PalettePicker } from './ColorControls';
 import { StageErrorBoundary } from './StageErrorBoundary';
-import { DEFAULT_BODY, findBody, type BodyId } from './models';
+import { DEFAULT_BODY, findBody } from './models';
 
 const Viewer3D = lazy(() => import('./Viewer3D').then((m) => ({ default: m.Viewer3D })));
 
@@ -34,7 +34,6 @@ interface ColorSimulatorProps {
 }
 
 export function ColorSimulator({ isActive, onActivate }: ColorSimulatorProps) {
-  const [bodyId, setBodyId] = useState<BodyId>(DEFAULT_BODY);
   const [selection, setSelection] = useState<Selection>({ kind: 'tone', toneId: DEFAULT_TONE_ID });
   const stageRef = useRef<HTMLDivElement>(null);
 
@@ -44,8 +43,16 @@ export function ColorSimulator({ isActive, onActivate }: ColorSimulatorProps) {
   }, [isActive]);
 
   const color = resolveSelection(selection);
-  const body = findBody(bodyId);
+  const body = findBody(DEFAULT_BODY);
   const paint = useMemo(() => ({ hex: color.hex, finish: color.finish }), [color.hex, color.finish]);
+  const selectTone = (toneId: string) => {
+    setSelection({ kind: 'tone', toneId });
+    if (!isActive) onActivate();
+  };
+  const applyCustomColor = (hex: string) => {
+    setSelection({ kind: 'custom', hex });
+    if (!isActive) onActivate();
+  };
   const inquiryUrl = whatsappUrl(
     colorInquiry({ bodyLabel: body.label, colorName: color.name, hex: color.hex, isCustom: color.isCustom }),
   );
@@ -60,15 +67,12 @@ export function ColorSimulator({ isActive, onActivate }: ColorSimulatorProps) {
         <div className="section-head">
           <h2 id="simulador-title">Prueba colores sobre una carrocería</h2>
           <p className="lede">
-            Elige un tipo de vehículo y un tono, gira el modelo y envíanos tu elección por WhatsApp para recibir
-            asesoría.
+            Toca un color para verlo en la carrocería. Arrastra el auto para girarlo y consulta el tono por WhatsApp.
           </p>
         </div>
 
         <div className="sim-layout">
-          <div className="sim-body">
-            <BodySelector value={bodyId} onChange={setBodyId} />
-          </div>
+          <p className="sim-body-note">Auto conceptual genérico, sin marca. Arrástralo para girarlo.</p>
 
           <div ref={stageRef} className="stage" role="region" aria-label="Vista del simulador" tabIndex={-1}>
             {isActive ? (
@@ -92,13 +96,14 @@ export function ColorSimulator({ isActive, onActivate }: ColorSimulatorProps) {
               </div>
             )}
           </div>
+          <p className="sim-model-credit">Modelo conceptual de Eric Chadwick / DGG · <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer">CC BY 4.0</a></p>
 
           <div className="sim-colors">
             <PalettePicker
               selectedToneId={selection.kind === 'tone' ? selection.toneId : null}
-              onSelect={(toneId) => setSelection({ kind: 'tone', toneId })}
+              onSelect={selectTone}
             />
-            <CustomColor currentHex={color.hex} onApply={(hex) => setSelection({ kind: 'custom', hex })} />
+            <CustomColor currentHex={color.hex} onApply={applyCustomColor} />
 
             <div className="selection-readout" style={readoutStyle} aria-live="polite">
               <i aria-hidden="true" />

@@ -4,6 +4,7 @@ import { MobileContact } from './components/layout/MobileContact';
 import { SiteFooter } from './components/layout/SiteFooter';
 import { SiteHeader } from './components/layout/SiteHeader';
 import { Advice } from './components/sections/Advice';
+import { BrandCatalog } from './components/sections/BrandCatalog';
 import { Faq } from './components/sections/Faq';
 import { HowToBuy } from './components/sections/HowToBuy';
 import { Location } from './components/sections/Location';
@@ -25,6 +26,7 @@ export default function App() {
         <Hero onTryColors={activateSimulator} />
         <ColorSimulator isActive={isSimulatorActive} onActivate={activateSimulator} />
         <Products />
+        <BrandCatalog />
         <Advice />
         <HowToBuy />
         <Testimonials />
